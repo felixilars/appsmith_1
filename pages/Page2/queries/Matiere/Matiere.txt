@@ -1,0 +1,4 @@
+SELECT DISTINCT nom FROM newroseclaire."matieres_premieres"
+WHERE actif IS TRUE 
+  AND categorie = 'ingredient'
+ORDER BY nom

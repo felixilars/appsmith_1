@@ -1,0 +1,3 @@
+SELECT nom FROM newroseclaire."sous_recettes"
+WHERE actif IS TRUE 
+ORDER BY nom

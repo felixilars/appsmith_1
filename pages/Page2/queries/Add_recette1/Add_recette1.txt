@@ -1,0 +1,7 @@
+INSERT INTO recettes_finales (nom_recette, description, photos, actif)
+VALUES (
+  '{{ Input_nom.text }}',
+  '{{ Input_cout.text }}',
+  '{{ FilePicker1.files[0]?.data || "" }}',
+  true
+);

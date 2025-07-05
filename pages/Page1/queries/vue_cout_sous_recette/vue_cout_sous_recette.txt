@@ -1,0 +1,8 @@
+SELECT * FROM newroseclaire."vue_cout_sous_recette"
+WHERE nom IN (
+    SELECT nom_composant 
+    FROM newroseclaire."vue_cout_detaille_recette_finale"
+    WHERE id_recette_finale = {{List_recette.selectedOptionValue}} 
+    AND type_composant = 'sous_recette'
+)
+ORDER BY nom;

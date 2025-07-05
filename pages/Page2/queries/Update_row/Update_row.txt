@@ -1,0 +1,4 @@
+UPDATE newroseclaire.composants_recettes_finales
+SET
+  quantite_unite = {{Table_Ingredients.selectedRow.quantite_unitaire}}
+WHERE id_composant = {{Table_Ingredients.selectedRow.id_recette_finale}};

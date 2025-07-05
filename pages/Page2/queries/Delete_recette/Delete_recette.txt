@@ -1,0 +1,1 @@
+DELETE FROM newroseclaire.recettes_finales WHERE nom_recette = '{{ Table1.selectedRow.nom_recette }}';

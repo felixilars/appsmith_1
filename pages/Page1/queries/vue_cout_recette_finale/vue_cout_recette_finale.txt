@@ -1,0 +1,2 @@
+SELECT * FROM newroseclaire."vue_cout_recette_finale"
+where id_recette_finale = {{List_recette.selectedOptionValue}};

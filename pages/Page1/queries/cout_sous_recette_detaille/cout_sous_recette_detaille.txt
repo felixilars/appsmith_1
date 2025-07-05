@@ -1,0 +1,12 @@
+SELECT 
+  mp.nom AS ingredient,
+  csr.quantite_unite AS quantite_utilisee,
+  mp.prix_achat_ht,
+  mp.quantite_unite AS quantite_achat,
+  ROUND(csr.quantite_unite * (mp.prix_achat_ht / mp.quantite_unite), 4) AS cout_final
+FROM newroseclaire.composants_sous_recettes csr
+JOIN newroseclaire.matieres_premieres mp 
+  ON csr.id_matiere_premiere = mp.id_matiere_premiere
+JOIN newroseclaire.sous_recettes sr
+  ON csr.id_sous_recette = sr.id_sous_recette
+WHERE sr.nom = {{this.params.nom_composant}};

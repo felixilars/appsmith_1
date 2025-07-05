@@ -1,0 +1,3 @@
+SELECT id_recette_finale, nom FROM newroseclaire."recettes_finales"
+where actif is TRUE
+ORDER BY nom;
