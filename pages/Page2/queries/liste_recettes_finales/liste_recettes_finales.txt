@@ -1,3 +1,0 @@
-SELECT id_recette_finale, nom, description, prix_vente, photo FROM newroseclaire."recettes_finales"
-where actif is TRUE
-ORDER BY nom;

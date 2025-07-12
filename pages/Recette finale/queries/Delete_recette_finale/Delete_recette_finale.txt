@@ -1,0 +1,1 @@
+DELETE FROM newroseclaire.recettes_finales WHERE id_recette_finale = '{{ Table1.triggeredRow.id_recette_finale }}';

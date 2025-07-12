@@ -1,0 +1,42 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "bottomRow": 29,
+  "boxShadow": "none",
+  "defaultSwitchState": true,
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "iy3pe02uov",
+  "label": "Actif",
+  "labelPosition": "Left",
+  "leftColumn": 44,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 28,
+  "mobileLeftColumn": 43,
+  "mobileRightColumn": 55,
+  "mobileTopRow": 24,
+  "needsErrorInfo": false,
+  "originalBottomRow": 29,
+  "originalTopRow": 25,
+  "parentColumnSpace": 18.98828125,
+  "parentId": "pnoqih3c7p",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 56,
+  "topRow": 25,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "hm293d6yp3",
+  "widgetName": "Actif"
+}

@@ -1,0 +1,2 @@
+SELECT id_recette_finale, nom, description, prix_vente, photo FROM newroseclaire."recettes_finales"
+ORDER BY nom;

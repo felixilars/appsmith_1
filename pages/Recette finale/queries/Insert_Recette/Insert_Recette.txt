@@ -1,0 +1,10 @@
+INSERT INTO newroseclaire.recettes_finales (nom, quantite_produite, coefficient_multiplicateur, prix_vente, description, actif, photo)
+VALUES (
+  '{{ Input_nom.text }}',
+  1, -- quantite_produite
+  6, -- coefficient_multiplicateur
+  {{ Input_cout.text }},
+  '{{ Input_description.text }}',
+  {{ Actif.isSwitchedOn }},
+  {{ Image.files.length > 0 ? `'${FilePicker1.files[0].dataUrl}'` : 'NULL' }}
+);

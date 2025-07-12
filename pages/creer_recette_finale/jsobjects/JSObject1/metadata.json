@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "683e21591b989748a426a418_7a4b1f47-3616-48cb-9dd0-b7e5e2d27cd3",
+  "id": "creer_recette_finale_JSObject1",
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "creer_recette_finale",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "tempTableData",
+        "value": "[]"
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+INSERT INTO newroseclaire.matieres_premieres (
+  nom,
+  categorie,
+  id_fournisseur,
+  id_unite,
+  prix_achat_ht,
+  quantite_unite,
+  actif,
+  description
+)
+VALUES (
+  '{{ Input_nom.text }}',
+  '{{ Select_categorie.selectedOptionValue }}',
+  {{ Select_fournisseur.selectedOptionValue }},
+  {{ Select_unite.selectedOptionValue }},
+  {{ Input_prix.text }},
+  {{ Input_quantite_unite.text }},
+  {{ Actif.isSwitchedOn }},
+  '{{ Input_description.text != "" ? Input_description.text : "" }}'
+);

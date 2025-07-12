@@ -1,0 +1,2 @@
+DELETE FROM newroseclaire.sous_recettes
+WHERE id_sous_recette = 84

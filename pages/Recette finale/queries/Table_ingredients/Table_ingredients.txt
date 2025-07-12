@@ -1,0 +1,3 @@
+SELECT *
+FROM newroseclaire."vue_cout_detaille_recette_finale"
+WHERE nom_recette = '{{ Table1.triggeredRow.nom }}';

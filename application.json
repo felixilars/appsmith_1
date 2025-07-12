@@ -3,29 +3,67 @@
   "appLayout": {
     "type": "FLUID"
   },
+  "applicationDetail": {
+    "navigationSetting": {
+      "colorStyle": "light",
+      "logoAssetId": "",
+      "logoConfiguration": "logoAndApplicationTitle",
+      "navStyle": "sidebar",
+      "orientation": "side",
+      "position": "static",
+      "showNavbar": true,
+      "showSignIn": true
+    },
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
+    }
+  },
   "applicationVersion": 2,
   "collapseInvisibleWidgets": true,
   "color": "#D9E7FF",
   "evaluationVersion": 2,
   "pages": [
     {
-      "id": "Home",
-      "isDefault": false
-    },
-    {
-      "id": "Page1",
+      "id": "Calcul cout revient",
       "isDefault": true
     },
     {
-      "id": "Home Copy",
+      "id": "Recette finale",
       "isDefault": false
     },
     {
-      "id": "Page2",
+      "id": "creer_matiere_premiere",
+      "isDefault": false
+    },
+    {
+      "id": "creer_sous_recette",
+      "isDefault": false
+    },
+    {
+      "id": "creer_recette_finale",
       "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
     "type": "FLUID"
+  },
+  "unpublishedApplicationDetail": {
+    "navigationSetting": {
+      "colorStyle": "light",
+      "logoAssetId": "",
+      "logoConfiguration": "logoAndApplicationTitle",
+      "navStyle": "sidebar",
+      "orientation": "side",
+      "position": "static",
+      "showNavbar": true,
+      "showSignIn": true
+    },
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
+    }
   }
 }

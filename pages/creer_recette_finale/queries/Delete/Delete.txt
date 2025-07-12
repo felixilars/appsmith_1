@@ -1,0 +1,2 @@
+DELETE FROM newroseclaire.recettes_finales
+WHERE nom = 'test 1'

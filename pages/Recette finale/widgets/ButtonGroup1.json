@@ -1,0 +1,102 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 19,
+  "boxShadow": "none",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "groupButtons.groupButton3.buttonColor"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem2qx6yxb3lb.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButton3": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "MENU",
+      "disabledWhenInvalid": false,
+      "iconName": "more",
+      "id": "groupButton3",
+      "index": 0,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Créer",
+      "menuItems": {
+        "menuItem1": {
+          "backgroundColor": "#FFFFFF",
+          "disabledWhenInvalid": false,
+          "id": "menuItem1",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Créer une matière première",
+          "onClick": "{{navigateTo('creer_matiere_premiere', {}, 'SAME_WINDOW');}}",
+          "widgetId": ""
+        },
+        "menuItem2": {
+          "backgroundColor": "#FFFFFF",
+          "disabledWhenInvalid": false,
+          "id": "menuItem2",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Créer une sous recette",
+          "onClick": "{{navigateTo('creer_sous_recette', {}, 'SAME_WINDOW');}}",
+          "widgetId": ""
+        },
+        "menuItem2qx6yxb3lb": {
+          "id": "menuItem2qx6yxb3lb",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Créer une recette",
+          "onClick": "{{navigateTo('creer_recette_finale', {}, 'SAME_WINDOW');}}",
+          "widgetId": "xxahrpkega"
+        }
+      },
+      "placement": "CENTER",
+      "widgetId": ""
+    }
+  },
+  "isCanvas": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "o32kmqszwn",
+  "leftColumn": 58,
+  "minWidth": 450,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 7,
+  "mobileRightColumn": 31,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "orientation": "horizontal",
+  "parentColumnSpace": 20.25,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "topRow": 15,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "75s7gh80dn",
+  "widgetName": "ButtonGroup1"
+}

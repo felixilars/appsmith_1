@@ -1,0 +1,12 @@
+INSERT INTO newroseclaire.composants_recettes_finales (
+  id_recette_finale,
+  matieres_premieres,
+  quantite_unite,
+  unites
+)
+VALUES (
+  {{ recette_id }},
+  {{ matiere_id }},
+  1,
+  'kg'
+);

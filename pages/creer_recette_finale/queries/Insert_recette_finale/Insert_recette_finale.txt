@@ -1,0 +1,15 @@
+INSERT INTO newroseclaire.recettes_finales (
+  nom, description, quantite_produite, id_unite,
+  prix_vente, instructions, actif, coefficient_multiplicateur
+)
+VALUES (
+  {{ Input_nom.text }},
+  {{ Input_description.text }},
+  1,
+  9,
+  {{ Input_prix.text }},
+  {{ Input_instruction.text }},
+  {{ Actif.isSwitchedOn }},
+  {{ Input_coeff.text }}
+)
+RETURNING id_recette_finale;

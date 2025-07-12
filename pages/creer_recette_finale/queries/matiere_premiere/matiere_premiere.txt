@@ -1,0 +1,4 @@
+SELECT id_matiere_premiere AS id, nom, 'matiere' AS type
+FROM newroseclaire.matieres_premieres
+WHERE actif = true
+ORDER by nom;

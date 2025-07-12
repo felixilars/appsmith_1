@@ -1,0 +1,4 @@
+SELECT id_recette_finale 
+FROM newroseclaire.recettes_finales 
+WHERE nom = '{{ nom }}' 
+LIMIT 1;

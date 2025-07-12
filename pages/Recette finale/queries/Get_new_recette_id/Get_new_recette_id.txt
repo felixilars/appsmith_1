@@ -1,0 +1,5 @@
+SELECT id_recette_finale
+FROM newroseclaire.recettes_finales
+WHERE nom = '{{ Input_nom.text }}'
+ORDER BY id_recette_finale DESC
+LIMIT 1;

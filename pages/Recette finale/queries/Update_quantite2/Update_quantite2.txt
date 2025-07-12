@@ -1,0 +1,5 @@
+UPDATE newroseclaire.recettes_finales
+SET
+	nom = {{Input_nom1.text}}
+	description = {{Input_description1.text}}
+WHERE id_recette_finale = {{ Table_Ingredients.triggeredRow.id_recette_finale }}

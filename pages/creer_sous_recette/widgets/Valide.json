@@ -1,0 +1,57 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 96,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "taxpbs76ya",
+  "leftColumn": 2,
+  "minWidth": 120,
+  "mobileBottomRow": 86,
+  "mobileLeftColumn": 26,
+  "mobileRightColumn": 42,
+  "mobileTopRow": 82,
+  "needsErrorInfo": false,
+  "onClick": "{{ \n JSObject1.save().then((success) => {\n    if (success) {\n      navigateTo('Recette finale', {}, 'SAME_WINDOW').then(() => {\n        resetWidget(\"Container1\", true);\n      });\n    }\n  });\n}}",
+  "originalBottomRow": 96,
+  "originalTopRow": 92,
+  "parentColumnSpace": 20.25,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 18,
+  "text": "Créer Sous Recette",
+  "topRow": 92,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "d2bcn4v880",
+  "widgetName": "Valide"
+}

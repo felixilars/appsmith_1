@@ -1,0 +1,14 @@
+INSERT INTO newroseclaire.composants_recettes_finales (
+  id_recette_finale,
+  id_matiere_premiere,
+  id_sous_recette,
+  quantite_unite,
+  id_unite
+)
+VALUES (
+  {{ this.params.id_recette_finale }},
+  {{ this.params.id_matiere_premiere }},
+  {{ this.params.id_sous_recette }},
+  {{ this.params.quantite_unite }},
+  {{ this.params.id_unite }}
+);
