@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 81,
+  "bottomRow": 86,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -33,12 +33,13 @@
   },
   "columnOrder": [
     "id",
-    "quantite",
     "type",
     "nom",
-    "unite"
+    "quantite",
+    "unite",
+    "customColumn1"
   ],
-  "columnUpdatedAt": 1752328286279,
+  "columnUpdatedAt": 1752358107972,
   "columnWidthMap": {},
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -75,6 +76,12 @@
     },
     {
       "key": "primaryColumns.unite.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn1.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn1.boxShadow"
     }
   ],
   "dynamicPropertyPathList": [
@@ -83,11 +90,17 @@
     },
     {
       "key": "primaryColumns.quantite.onSubmit"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "dynamicTriggerPathList": [
     {
       "key": "primaryColumns.quantite.onSubmit"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -98,7 +111,7 @@
   "isLoading": false,
   "isSortable": true,
   "isVisible": true,
-  "isVisibleDownload": true,
+  "isVisibleDownload": false,
   "isVisibleFilters": false,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
@@ -111,12 +124,52 @@
   "mobileRightColumn": 35,
   "mobileTopRow": 48,
   "needsErrorInfo": false,
-  "originalBottomRow": 81,
+  "originalBottomRow": 85,
   "originalTopRow": 48,
   "parentColumnSpace": 18.98828125,
   "parentId": "pnoqih3c7p",
   "parentRowSpace": 10,
   "primaryColumns": {
+    "customColumn1": {
+      "alias": "Delete",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{TableRecette.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{TableRecette.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "#3f3f46",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "cellBackground": "#f4f4f5",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "iconName": "trash",
+      "id": "customColumn1",
+      "index": 6,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Delete",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "onClick": "{{ \n  storeValue(\n    'tempTableData',\n    appsmith.store.tempTableData.filter(\n      row => !(row.id === TableRecette.triggeredRow.id && row.type === TableRecette.triggeredRow.type)\n    )\n  ) \n}}\n",
+      "originalId": "customColumn1",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "id": {
       "alias": "id",
       "allowCellWrapping": false,
@@ -137,7 +190,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "id",
       "notation": "standard",
       "originalId": "id",
@@ -285,7 +338,7 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 62,
+  "rightColumn": 44,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{ appsmith.store.tempTableData }}",

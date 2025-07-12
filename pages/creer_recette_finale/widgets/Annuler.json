@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 99,
+  "bottomRow": 103,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
@@ -44,7 +44,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 63,
   "text": "Annuler",
-  "topRow": 95,
+  "topRow": 99,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "20h749eiwu",

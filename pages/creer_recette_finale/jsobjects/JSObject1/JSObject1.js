@@ -1,13 +1,13 @@
 export default {
 
-  tempTableData: [],
+	tempTableData: [],
 
-  addToTable: () => {
-    const selectedValues = MultiTreeSelect.selectedOptionValues;
-  	const allOptions = MultiTreeSelect.options;
+	addToTable: () => {
+		const selectedValues = MultiTreeSelect.selectedOptionValues;
+		const allOptions = MultiTreeSelect.options;
 
-    const flatItems = allOptions.flatMap(group => group.children || []);
-		
+		const flatItems = allOptions.flatMap(group => group.children || []);
+
 		const newItems = selectedValues.map(val => {
 			const matched = flatItems.find(item => item.value === val);
 			return {
@@ -33,31 +33,31 @@ export default {
 		storeValue("tempTableData", combined);
 	},
 
-  checkAndSave: async () => {
-    // Kiểm tra thông tin bắt buộc
-    if (!Input_nom.text || !Input_prix.text || !appsmith.store.tempTableData.length) {
-      showAlert("Veuillez remplir tous les champs obligatoires", "error");
-      return;
-    }
+	checkAndSave: async () => {
+		// Kiểm tra thông tin bắt buộc
+		if (!Input_nom.text || !Input_prix.text || !appsmith.store.tempTableData.length) {
+			showAlert("Veuillez remplir tous les champs obligatoires", "error");
+			return;
+		}
 
-    const hasMissingQty = this.tempTableData.some(item => !item.quantite || Number(item.quantite) <= 0);
-    if (hasMissingQty) {
-      showAlert("Certaines quantités sont manquantes ou invalides.", "error");
-      return;
-    }
-		
+		const hasMissingQty = this.tempTableData.some(item => !item.quantite || Number(item.quantite) <= 0);
+		if (hasMissingQty) {
+			showAlert("Certaines quantités sont manquantes ou invalides.", "error");
+			return;
+		}
+
 		const updatedData = TableRecette.tableData.map(row => ({
 			...row,
 			quantite: Number(row.quantite)  // ép kiểu luôn
 		}));
 
 		storeValue("tempTableData", updatedData);
-		
-    try {
-      const recetteData = await Insert_recette_finale.run();
-      const recetteId = recetteData[0].id_recette_finale;
 
-      for (let item of appsmith.store.tempTableData) {
+		try {
+			const recetteData = await Insert_recette_finale.run();
+			const recetteId = recetteData[0].id_recette_finale;
+
+			for (let item of appsmith.store.tempTableData) {
 				await Insert_composants.run ({
 					id_recette_finale: recetteId,
 					id_matiere_premiere: item.type === "matiere" ? item.id : null,
@@ -65,14 +65,14 @@ export default {
 					quantite_unite: item.quantite,
 					id_unite: null
 				});
-    	}
+			}
 
-      showAlert("Recette ajoutée avec succès !", "success");
-      storeValue('tempTableData', []);
+			showAlert("Recette ajoutée avec succès !", "success");
+			storeValue('tempTableData', []);
 		}
 		catch (err) {
-      showAlert("Erreur lors de l'enregistrement: " + err.message, "error");
-    }
-  }
+			showAlert("Erreur lors de l'enregistrement: " + err.message, "error");
+		}
+	}
 };
 

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 99,
+  "bottomRow": 103,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
@@ -14,11 +14,7 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [
-    {
-      "key": "onClick"
-    }
-  ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -36,7 +32,7 @@
   "mobileRightColumn": 38,
   "mobileTopRow": 96,
   "needsErrorInfo": false,
-  "onClick": "{{\n  JSObject2.save().then(success => {\n    if (success) {\n      resetWidget(\"Container1\", true);\n    }\n  });\n}}\n",
+  "onClick": "{{JSObject1.checkAndSave();\nresetWidget(\"Container1\", true);}}",
   "originalBottomRow": 99,
   "originalTopRow": 95,
   "parentColumnSpace": 20.25,
@@ -49,7 +45,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 43,
   "text": "Créer puis Suivant",
-  "topRow": 95,
+  "topRow": 99,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "rdbn4qzjn5",

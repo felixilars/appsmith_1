@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "683e21591b989748a426a418_ea74c69d-e480-4286-bebf-bf8976649b5e",
-  "id": "Calcul cout revient_vue_cout_recette_finale",
+  "gitSyncId": "683e21591b989748a426a418_d6c7c4e2-b917-45bb-a2a1-683d6ee331a5",
+  "id": "creer_recette_finale_Get_matiere_unites",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM newroseclaire.\"vue_cout_recette_finale\"\nwhere id_recette_finale = {{List_recette.selectedOptionValue}};",
+      "body": "SELECT id_matiere_premiere, id_unite, unites.nom_unite\nFROM newroseclaire.matieres_premieres\nJOIN unites ON matieres_premieres.id_unite = unites.id_unite;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000
@@ -22,14 +22,10 @@
       "name": "roseclaire database",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
-    "name": "vue_cout_recette_finale",
-    "pageId": "Calcul cout revient",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "dynamicBindingPathList": [],
+    "name": "Get_matiere_unites",
+    "pageId": "creer_recette_finale",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
