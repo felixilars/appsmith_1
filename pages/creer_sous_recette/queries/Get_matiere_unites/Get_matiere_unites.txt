@@ -1,4 +1,4 @@
-SELECT mp.id_matiere_premiere, mp.id_unite, u.nom_unite
+SELECT mp.id_matiere_premiere, mp.id_unite, u.nom_unite, u.type_unite
 FROM newroseclaire.matieres_premieres mp
 JOIN unites u ON mp.id_unite = u.id_unite
 WHERE mp.actif = true;

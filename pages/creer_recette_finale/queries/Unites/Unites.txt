@@ -1,0 +1,2 @@
+SELECT id_unite, nom_unite, type_unite, unite_base, facteur_conversion
+FROM newroseclaire.unites;

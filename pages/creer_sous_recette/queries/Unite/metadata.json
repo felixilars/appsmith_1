@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id_unite, nom_unite FROM newroseclaire.\"unites\"\nORDER by id_unite",
+      "body": "SELECT id_unite, nom_unite, type_unite FROM newroseclaire.\"unites\"\nORDER by id_unite",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "Unite",
     "pageId": "creer_sous_recette",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "runBehaviour": "ON_PAGE_LOAD",
+    "userSetOnLoad": true
   }
 }

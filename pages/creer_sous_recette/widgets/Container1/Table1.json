@@ -35,11 +35,13 @@
     "nom_matiere_premiere",
     "quantite",
     "id_unite",
-    "unite",
     "customColumn1",
-    "id_matiere_premiere"
+    "id_matiere_premiere",
+    "type_unite",
+    "nom_unite",
+    "unite_options"
   ],
-  "columnUpdatedAt": 1752434557328,
+  "columnUpdatedAt": 1752506448444,
   "columnWidthMap": {
     "nom_matiere_premiere": 282
   },
@@ -68,16 +70,25 @@
       "key": "primaryColumns.quantite.computedValue"
     },
     {
-      "key": "primaryColumns.id_unite.computedValue"
-    },
-    {
-      "key": "primaryColumns.unite.computedValue"
-    },
-    {
       "key": "primaryColumns.id_matiere_premiere.computedValue"
     },
     {
+      "key": "primaryColumns.id_unite.computedValue"
+    },
+    {
+      "key": "primaryColumns.type_unite.computedValue"
+    },
+    {
+      "key": "primaryColumns.id_unite.selectOptions"
+    },
+    {
       "key": "primaryColumns.nom_matiere_premiere.computedValue"
+    },
+    {
+      "key": "primaryColumns.nom_unite.computedValue"
+    },
+    {
+      "key": "primaryColumns.unite_options.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -86,11 +97,17 @@
     },
     {
       "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "primaryColumns.id_unite.onOptionChange"
     }
   ],
   "dynamicTriggerPathList": [
     {
       "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "primaryColumns.id_unite.onOptionChange"
     }
   ],
   "enableClientSideSearch": true,
@@ -199,8 +216,8 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "number",
-      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id_unite\"]))}}",
+      "columnType": "select",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.id_unite)) : currentRow.id_unite })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -209,17 +226,19 @@
       "horizontalAlignment": "LEFT",
       "id": "id_unite",
       "index": 3,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "id_unite",
       "notation": "standard",
+      "onOptionChange": "{{ JSObject2.updateUniteSelection(currentRow.id_matiere_premiere, currentRow.id_unite) }}",
       "originalId": "id_unite",
+      "selectOptions": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\ncurrentRow.unite_options.map(u => ({\n  label: u.nom_unite,\n  value: u.id_unite\n}))\n\n)) : \ncurrentRow.unite_options.map(u => ({\n  label: u.nom_unite,\n  value: u.id_unite\n}))\n\n })()}}",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -262,6 +281,40 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "nom_unite": {
+      "alias": "nom_unite",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nom_unite\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "nom_unite",
+      "index": 4,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "nom_unite",
+      "notation": "standard",
+      "originalId": "nom_unite",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "quantite": {
       "alias": "quantite",
       "allowCellWrapping": false,
@@ -293,21 +346,21 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "unite": {
-      "alias": "unite",
+    "type_unite": {
+      "alias": "type_unite",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.unite )) :  currentRow.unite  })()}}",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"type_unite\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "unite",
-      "index": 4,
+      "id": "type_unite",
+      "index": 5,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -315,10 +368,44 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
-      "label": "unite",
+      "isVisible": false,
+      "label": "type_unite",
       "notation": "standard",
-      "originalId": "unite",
+      "originalId": "type_unite",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "unite_options": {
+      "alias": "unite_options",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"unite_options\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "unite_options",
+      "index": 6,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "unite_options",
+      "notation": "standard",
+      "originalId": "unite_options",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

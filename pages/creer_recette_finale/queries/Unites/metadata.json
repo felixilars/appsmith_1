@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "683e21591b989748a426a418_7060a168-74fd-44ec-9669-25212c5ee9b7",
-  "id": "creer_sous_recette_Get_matiere_unites",
+  "gitSyncId": "683e21591b989748a426a418_3636cacc-58ab-49ee-bb58-8f80d68bc7b4",
+  "id": "creer_recette_finale_Unites",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT mp.id_matiere_premiere, mp.id_unite, u.nom_unite, u.type_unite\nFROM newroseclaire.matieres_premieres mp\nJOIN unites u ON mp.id_unite = u.id_unite\nWHERE mp.actif = true;\n",
+      "body": "SELECT id_unite, nom_unite, type_unite, unite_base, facteur_conversion\nFROM newroseclaire.unites;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "Get_matiere_unites",
-    "pageId": "creer_sous_recette",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": true
+    "name": "Unites",
+    "pageId": "creer_recette_finale",
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": false
   }
 }

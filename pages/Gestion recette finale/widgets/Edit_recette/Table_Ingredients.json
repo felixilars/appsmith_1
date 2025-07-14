@@ -41,10 +41,9 @@
     "id_recette_finale",
     "nom_recette",
     "quantite_unitaire",
-    "unite",
-    "EditActions1"
+    "unite"
   ],
-  "columnUpdatedAt": 1752361152655,
+  "columnUpdatedAt": 1752513613023,
   "columnWidthMap": {
     "cout_total": 125,
     "cout_unitaire": 157,
@@ -100,44 +99,19 @@
     },
     {
       "key": "primaryColumns.unite.computedValue"
-    },
-    {
-      "key": "primaryColumns.EditActions1.saveButtonColor"
-    },
-    {
-      "key": "primaryColumns.EditActions1.saveBorderRadius"
-    },
-    {
-      "key": "primaryColumns.EditActions1.discardBorderRadius"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isSaveDisabled"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isDiscardDisabled"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isSaveDisabled"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isDiscardDisabled"
     }
   ],
-  "dynamicTriggerPathList": [
-    {
-      "key": "primaryColumns.EditActions1.onSave"
-    }
-  ],
+  "dynamicTriggerPathList": [],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
-  "inlineEditingSaveOption": "ROW_LEVEL",
+  "inlineEditingSaveOption": "CUSTOM",
   "isLoading": false,
   "isSortable": true,
   "isVisible": true,
@@ -160,47 +134,6 @@
   "parentId": "hnrsikahl2",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "EditActions1": {
-      "alias": "EditActions1",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "buttonStyle": "rgb(3, 179, 101)",
-      "columnType": "editActions",
-      "computedValue": "",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "discardActionLabel": "Discard",
-      "discardBorderRadius": "{{Table_Ingredients.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "discardButtonColor": "#F22B2B",
-      "discardButtonVariant": "TERTIARY",
-      "discardIconAlign": "left",
-      "enableFilter": true,
-      "enableSort": true,
-      "id": "EditActions1",
-      "index": 9,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": true,
-      "isDisabled": false,
-      "isDiscardDisabled": "{{Table_Ingredients.processedTableData.map((currentRow, currentIndex) => ( !Table_Ingredients.updatedRowIndices.includes(currentIndex)))}}",
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveDisabled": "{{Table_Ingredients.processedTableData.map((currentRow, currentIndex) => ( !Table_Ingredients.updatedRowIndices.includes(currentIndex)))}}",
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "Save / Discard",
-      "notation": "standard",
-      "onSave": "{{Update_quantite1.run().then(() => {\n  Table_ingredients.run();\n  Get_id_matiere_premiere.run();\n  Get_id_sous_recette.run();\n});}}",
-      "originalId": "EditActions1",
-      "saveActionLabel": "Save",
-      "saveBorderRadius": "{{Table_Ingredients.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "saveButtonColor": "{{Table_Ingredients.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
-      "saveIconAlign": "left",
-      "sticky": "right",
-      "thousandSeparator": true,
-      "validation": {},
-      "width": 150
-    },
     "cout_total": {
       "alias": "cout_total",
       "allowCellWrapping": false,

@@ -36,12 +36,16 @@
     "type",
     "nom",
     "quantite",
+    "id_unite",
     "unite",
     "customColumn1",
-    "id_unite"
+    "type_unite",
+    "unite_options"
   ],
-  "columnUpdatedAt": 1752400230244,
-  "columnWidthMap": {},
+  "columnUpdatedAt": 1752512288686,
+  "columnWidthMap": {
+    "nom": 188
+  },
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
@@ -86,6 +90,15 @@
     },
     {
       "key": "primaryColumns.id_unite.computedValue"
+    },
+    {
+      "key": "primaryColumns.type_unite.computedValue"
+    },
+    {
+      "key": "primaryColumns.unite_options.computedValue"
+    },
+    {
+      "key": "primaryColumns.id_unite.selectOptions"
     }
   ],
   "dynamicPropertyPathList": [
@@ -97,6 +110,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "primaryColumns.id_unite.onOptionChange"
     }
   ],
   "dynamicTriggerPathList": [
@@ -105,6 +121,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "primaryColumns.id_unite.onOptionChange"
     }
   ],
   "enableClientSideSearch": true,
@@ -210,7 +229,7 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "number",
+      "columnType": "select",
       "computedValue": "{{TableRecette.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id_unite\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
@@ -220,17 +239,19 @@
       "horizontalAlignment": "LEFT",
       "id": "id_unite",
       "index": 5,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "id_unite",
       "notation": "standard",
+      "onOptionChange": "{{ JSObject1.updateUnite(currentRow.id, currentRow.type, currentRow.id_unite) }}\n",
       "originalId": "id_unite",
+      "selectOptions": "{{(() => { const tableData = TableRecette.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\ncurrentRow.unite_options.map(u => ({\n  label: u.nom_unite,\n  value: u.id_unite\n}))\n)) : \ncurrentRow.unite_options.map(u => ({\n  label: u.nom_unite,\n  value: u.id_unite\n}))\n })()}}",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -339,6 +360,40 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "type_unite": {
+      "alias": "type_unite",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{TableRecette.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"type_unite\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "type_unite",
+      "index": 6,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "type_unite",
+      "notation": "standard",
+      "originalId": "type_unite",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "unite": {
       "alias": "unite",
       "allowCellWrapping": false,
@@ -361,10 +416,44 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "unite",
       "notation": "standard",
       "originalId": "unite",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "unite_options": {
+      "alias": "unite_options",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{TableRecette.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"unite_options\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "unite_options",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "unite_options",
+      "notation": "standard",
+      "originalId": "unite_options",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

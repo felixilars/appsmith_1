@@ -8,6 +8,7 @@ export default {
 
 		const flatItems = allOptions.flatMap(group => group.children || []);
 
+		// Tạo map từ id -> info của matières
 		const matiereMap = Get_matiere_unites.data.reduce((acc, row) => {
 			acc[row.id_matiere_premiere] = {
 				id_unite: row.id_unite,
@@ -16,11 +17,23 @@ export default {
 			return acc;
 		}, {});
 
+		// Map từ id -> info của sous-recettes
 		const sousrecetteMap = Get_sous_recette_unites.data.reduce((acc, row) => {
 			acc[row.id_sous_recette] = {
 				id_unite: row.id_unite,
 				nom_unite: row.nom_unite
 			};
+			return acc;
+		}, {});
+
+		// Tạo map nhóm unites theo type_unite
+		const uniteMap = Unites.data.reduce((acc, row) => {
+			if (!acc[row.type_unite]) acc[row.type_unite] = [];
+			acc[row.type_unite].push({
+				id_unite: row.id_unite,
+				nom_unite: row.nom_unite,
+				type_unite: row.type_unite
+			});
 			return acc;
 		}, {});
 
@@ -30,15 +43,27 @@ export default {
 
 			let id_unite = null;
 			let nom_unite = "";
+			let type_unite = "";
+			let unite_options = [];
 
+			// Trường hợp matière première
 			if (matched.type === "matiere" && matiereMap[matched.id]) {
 				id_unite = matiereMap[matched.id].id_unite;
 				nom_unite = matiereMap[matched.id].nom_unite;
+
+				const uInfo = Unites.data.find(u => u.id_unite === id_unite);
+				type_unite = uInfo?.type_unite || "";
+				unite_options = uniteMap[type_unite] || [];
 			}
 
+			// Trường hợp sous-recette
 			if (matched.type === "sous_recette" && sousrecetteMap[matched.id]) {
 				id_unite = sousrecetteMap[matched.id].id_unite;
 				nom_unite = sousrecetteMap[matched.id].nom_unite;
+
+				const uInfo = Unites.data.find(u => u.id_unite === id_unite);
+				type_unite = uInfo?.type_unite || "";
+				unite_options = uniteMap[type_unite] || [];
 			}
 
 			return {
@@ -46,8 +71,10 @@ export default {
 				id: matched.id,
 				type: matched.type,
 				quantite: "",
+				id_unite: id_unite,
 				unite: nom_unite,
-				id_unite: id_unite
+				type_unite: type_unite,
+				unite_options: unite_options
 			};
 		}).filter(Boolean);
 
@@ -63,7 +90,6 @@ export default {
 	},
 
 	checkAndSave: async () => {
-		// Kiểm tra thông tin bắt buộc
 		if (!Input_nom.text || !Input_prix.text || !appsmith.store.tempTableData.length) {
 			showAlert("Veuillez remplir tous les champs obligatoires", "error");
 			return;
@@ -103,6 +129,23 @@ export default {
 		catch (err) {
 			showAlert("Erreur lors de l'enregistrement: " + err.message, "error");
 		}
+	},
+	updateUnite(id, type, new_id_unite) {
+		const table = appsmith.store.tempTableData || [];
+
+		const updated = table.map(row => {
+			if (row.id === id && row.type === type) {
+				const selected = row.unite_options.find(u => u.id_unite === new_id_unite);
+				return {
+					...row,
+					id_unite: selected.id_unite,
+					unite: selected.nom_unite
+				};
+			}
+			return row;
+		});
+
+		storeValue("tempTableData", updated);
 	}
 };
 
