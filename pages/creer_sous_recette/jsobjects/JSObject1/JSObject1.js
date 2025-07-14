@@ -34,7 +34,7 @@ export default {
 					id_sous_recette: idSousRecette,
 					id_matiere_premiere: comp.id_matiere_premiere,
 					quantite_unite: comp.quantite,
-					id_unite: null
+					id_unite: comp.id_unite
 				});
 			}
 

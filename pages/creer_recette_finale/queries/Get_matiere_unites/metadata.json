@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id_matiere_premiere, id_unite, unites.nom_unite\nFROM newroseclaire.matieres_premieres\nJOIN unites ON matieres_premieres.id_unite = unites.id_unite;\n",
+      "body": "SELECT mp.id_matiere_premiere, mp.id_unite, u.nom_unite\nFROM newroseclaire.matieres_premieres mp\nJOIN unites u ON mp.id_unite = u.id_unite\nWHERE mp.actif = true;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000
@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "Get_matiere_unites",
     "pageId": "creer_recette_finale",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "runBehaviour": "ON_PAGE_LOAD",
+    "userSetOnLoad": true
   }
 }

@@ -1,3 +1,0 @@
-SELECT id_matiere_premiere 
-FROM newroseclaire.matieres_premieres 
-WHERE nom = {{ Table_Ingredients.triggeredRow.nom_composant }} AND {{ Table_Ingredients.triggeredRow.type_composant == 'matiere' }};

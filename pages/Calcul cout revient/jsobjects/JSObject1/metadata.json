@@ -1,16 +1,11 @@
 {
-  "gitSyncId": "683e21591b989748a426a418_12983c25-6e5f-4615-8a1b-19fd732e07c6",
+  "gitSyncId": "683e21591b989748a426a418_9d3ff77a-01da-4009-8c12-960e1bb5cbc1",
   "id": "Calcul cout revient_JSObject1",
   "unpublishedCollection": {
     "name": "JSObject1",
     "pageId": "Calcul cout revient",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "variables": [
-      {
-        "name": "expandedSous",
-        "value": "{}"
-      }
-    ]
+    "variables": []
   }
 }

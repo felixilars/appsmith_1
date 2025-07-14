@@ -1,4 +1,0 @@
-SELECT id_matiere_premiere 
-FROM newroseclaire.matieres_premieres 
-WHERE nom = '{{ nom }}' 
-LIMIT 1;

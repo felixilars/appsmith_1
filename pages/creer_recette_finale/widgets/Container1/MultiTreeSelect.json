@@ -44,7 +44,7 @@
   "mobileTopRow": 42,
   "mode": "SHOW_ALL",
   "needsErrorInfo": false,
-  "onDropdownOpen": "{{sous_recette.run().then(() => {\n  matiere_premiere.run();\n});}}",
+  "onDropdownOpen": "{{sous_recette.run().then(() => {\n  matiere_premiere.run();\n  Get_matiere_unites.run();\n  Get_sous_recette_unites.run();\n});}}",
   "options": "[\n  {\n    \"label\": \"Matières Premières\",\n    \"value\": \"matiere_group\",\n    \"children\": {{ matiere_premiere.data.map(i => ({\n      label: i.nom,\n      value: \"matiere_\" + i.id,\n      type: \"matiere\",\n      id: i.id\n    })) }}\n  },\n  {\n    \"label\": \"Sous-Recettes\",\n    \"value\": \"sous_recette_group\",\n    \"children\": {{ sous_recette.data.map(s => ({\n      label: s.nom,\n      value: \"sousrecette_\" + s.id,\n      type: \"sous_recette\",\n      id: s.id\n    })) }}\n  }\n]",
   "originalBottomRow": 44,
   "originalTopRow": 37,

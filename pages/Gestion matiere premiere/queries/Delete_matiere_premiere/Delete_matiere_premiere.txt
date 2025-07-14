@@ -1,0 +1,1 @@
+DELETE FROM newroseclaire.matieres_premieres WHERE id_matiere_premiere = '{{ Table1.triggeredRow.id_matiere_premiere }}';

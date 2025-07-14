@@ -31,7 +31,7 @@
   "mobileRightColumn": 57,
   "mobileTopRow": 67,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('Recette finale', {}, 'SAME_WINDOW');}}",
+  "onClick": "{{navigateTo('Gestion recette finale', {}, 'SAME_WINDOW');}}",
   "originalBottomRow": 69,
   "originalTopRow": 65,
   "parentColumnSpace": 20.25,

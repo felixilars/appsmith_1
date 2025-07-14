@@ -32,14 +32,16 @@
     }
   },
   "columnOrder": [
-    "id_matiere_premiere",
     "nom_matiere_premiere",
     "quantite",
-    "customColumn1"
+    "id_unite",
+    "unite",
+    "customColumn1",
+    "id_matiere_premiere"
   ],
-  "columnUpdatedAt": 1751907882775,
+  "columnUpdatedAt": 1752434557328,
   "columnWidthMap": {
-    "nom_matiere_premiere": 239
+    "nom_matiere_premiere": 282
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -63,13 +65,19 @@
       "key": "tableData"
     },
     {
+      "key": "primaryColumns.quantite.computedValue"
+    },
+    {
+      "key": "primaryColumns.id_unite.computedValue"
+    },
+    {
+      "key": "primaryColumns.unite.computedValue"
+    },
+    {
       "key": "primaryColumns.id_matiere_premiere.computedValue"
     },
     {
       "key": "primaryColumns.nom_matiere_premiere.computedValue"
-    },
-    {
-      "key": "primaryColumns.quantite.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -156,12 +164,14 @@
       "alias": "id_matiere_premiere",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
       "columnType": "number",
       "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id_matiere_premiere\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "id_matiere_premiere",
       "index": 0,
@@ -177,6 +187,41 @@
       "notation": "standard",
       "originalId": "id_matiere_premiere",
       "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "id_unite": {
+      "alias": "id_unite",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id_unite\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "id_unite",
+      "index": 3,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "id_unite",
+      "notation": "standard",
+      "originalId": "id_unite",
+      "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -187,12 +232,14 @@
       "alias": "nom_matiere_premiere",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
       "columnType": "text",
       "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nom_matiere_premiere\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "nom_matiere_premiere",
       "index": 1,
@@ -208,6 +255,7 @@
       "notation": "standard",
       "originalId": "nom_matiere_premiere",
       "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -244,11 +292,45 @@
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 150
+    },
+    "unite": {
+      "alias": "unite",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.unite )) :  currentRow.unite  })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "unite",
+      "index": 4,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "unite",
+      "notation": "standard",
+      "originalId": "unite",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
     }
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 30,
+  "rightColumn": 63,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{ appsmith.store.table_temp }}\n",

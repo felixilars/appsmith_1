@@ -1,0 +1,90 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 6,
+  "boxShadow": "none",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "groupButtons.groupButton3.buttonColor"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.menuItems.menuItem2.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButton3": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "MENU",
+      "disabledWhenInvalid": false,
+      "iconName": "more",
+      "id": "groupButton3",
+      "index": 0,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "More",
+      "menuItems": {
+        "menuItem1": {
+          "backgroundColor": "#FFFFFF",
+          "disabledWhenInvalid": false,
+          "id": "menuItem1",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Créer une sous recette",
+          "onClick": "{{navigateTo('creer_sous_recette', {}, 'SAME_WINDOW');}}",
+          "widgetId": ""
+        },
+        "menuItem2": {
+          "backgroundColor": "#FFFFFF",
+          "disabledWhenInvalid": false,
+          "id": "menuItem2",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Créer une matière première",
+          "onClick": "{{navigateTo('creer_matiere_premiere', {}, 'SAME_WINDOW');}}",
+          "widgetId": ""
+        }
+      },
+      "placement": "CENTER",
+      "widgetId": ""
+    }
+  },
+  "isCanvas": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "1717i5qrmi",
+  "leftColumn": 58,
+  "minWidth": 450,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 39,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "orientation": "horizontal",
+  "parentColumnSpace": 20.25,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "topRow": 2,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "3igo0h853a",
+  "widgetName": "ButtonGroup1"
+}

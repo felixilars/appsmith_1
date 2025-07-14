@@ -31,7 +31,7 @@
   "mobileRightColumn": 58,
   "mobileTopRow": 96,
   "needsErrorInfo": false,
-  "onClick": "{{resetWidget(\"Container1\", true).then(() => {\n  navigateTo('Recette finale', {}, 'SAME_WINDOW');\n});}}",
+  "onClick": "{{resetWidget(\"Container1\", true).then(() => {\n  navigateTo('Gestion recette finale', {}, 'SAME_WINDOW');\n});}}",
   "originalBottomRow": 99,
   "originalTopRow": 95,
   "parentColumnSpace": 20.25,

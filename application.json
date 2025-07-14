@@ -30,7 +30,7 @@
       "isDefault": true
     },
     {
-      "id": "Recette finale",
+      "id": "Gestion recette finale",
       "isDefault": false
     },
     {
@@ -43,6 +43,18 @@
     },
     {
       "id": "creer_recette_finale",
+      "isDefault": false
+    },
+    {
+      "id": "Gestion sous recette",
+      "isDefault": false
+    },
+    {
+      "id": "Gestion matiere premiere",
+      "isDefault": false
+    },
+    {
+      "id": "Gestion fournisseur",
       "isDefault": false
     }
   ],

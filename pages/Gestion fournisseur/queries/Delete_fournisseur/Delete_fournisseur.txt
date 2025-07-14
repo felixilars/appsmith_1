@@ -1,0 +1,2 @@
+DELETE FROM newroseclaire.fournisseurs
+WHERE id_fournisseur = {{Table1.triggeredRow.id_fournisseur}};

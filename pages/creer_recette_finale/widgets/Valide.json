@@ -14,7 +14,11 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -32,7 +36,7 @@
   "mobileRightColumn": 60,
   "mobileTopRow": 75,
   "needsErrorInfo": false,
-  "onClick": "{{JSObject1.checkAndSave();\nresetWidget(\"Container1\", true).then(() => {\n  navigateTo('Recette finale', {}, 'SAME_WINDOW');\n});}}",
+  "onClick": "{{JSObject1.checkAndSave();\nresetWidget(\"Container1\", true).then(() => {\n  navigateTo('Gestion recette finale', {}, 'SAME_WINDOW');\n});}}",
   "originalBottomRow": 99,
   "originalTopRow": 95,
   "parentColumnSpace": 18.98828125,

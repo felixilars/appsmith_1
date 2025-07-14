@@ -36,7 +36,7 @@
   "mobileRightColumn": 18,
   "mobileTopRow": 65,
   "needsErrorInfo": false,
-  "onClick": "{{Insert_new_matiere_premiere.run().then(() => {\n  navigateTo('Recette finale', {}, 'SAME_WINDOW');\n  showAlert('Création réussie', 'success');\n  resetWidget(\"Container1\", true);\n});}}",
+  "onClick": "{{  JSObject1.check().then((isValid) => {\n    if (isValid) {\n      Insert_new_matiere_premiere.run().then(() => {\n        navigateTo('Gestion recette finale', {}, 'SAME_WINDOW');\n        showAlert('Création réussie', 'success');\n        resetWidget(\"Container1\", true);\n      });\n    }\n  })\n}}\n",
   "originalBottomRow": 69,
   "originalTopRow": 65,
   "parentColumnSpace": 20.25,

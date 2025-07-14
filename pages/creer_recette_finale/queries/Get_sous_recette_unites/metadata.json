@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id_sous_recette, id_unite, unites.nom_unite\nFROM newroseclaire.sous_recette\nJOIN unites ON sous_recette.id_unite = unites.id_unite;\n",
+      "body": "SELECT sr.id_sous_recette, sr.id_unite, u.nom_unite\nFROM newroseclaire.sous_recettes sr\nJOIN unites u ON sr.id_unite = u.id_unite\nWHERE sr.actif = true;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "Get_sous_recette_unites",
     "pageId": "creer_recette_finale",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "runBehaviour": "ON_PAGE_LOAD",
+    "userSetOnLoad": true
   }
 }

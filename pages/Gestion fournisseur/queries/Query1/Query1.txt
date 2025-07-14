@@ -1,0 +1,2 @@
+INSERT INTO newroseclaire.fournisseurs (nom_fournisseur)
+VALUES ('{{InputNomFournisseur.text}}');

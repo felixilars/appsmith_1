@@ -1,3 +1,0 @@
-SELECT id_sous_recette
-FROM newroseclaire.sous_recettes 
-WHERE nom = {{ Table_Ingredients.triggeredRow.nom_composant }} AND {{ Table_Ingredients.triggeredRow.type_composant == 'sous_recette' }};

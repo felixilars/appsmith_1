@@ -1,0 +1,3 @@
+SELECT id_sous_recette, nom, description, instructions FROM newroseclaire."sous_recettes"
+WHERE actif = true
+ORDER by nom;
