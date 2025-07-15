@@ -1,0 +1,2 @@
+DELETE FROM newroseclaire.unites
+WHERE id_unite = {{Table1.triggeredRow.id_unite}};

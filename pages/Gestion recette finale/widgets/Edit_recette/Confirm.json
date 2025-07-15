@@ -33,7 +33,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{Update_quantite1.run().then(() => {\n  Table_ingredients.run();\n  Update_quantite2.run();\n});}}",
+  "onClick": "{{JSObject1.saveRecette();\nTable_ingredients.run().then(() => {\n  liste_recettes_finales.run();\n});}}",
   "originalBottomRow": 70,
   "originalTopRow": 66,
   "parentId": "hnrsikahl2",

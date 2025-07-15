@@ -1,2 +1,2 @@
-SELECT id_fournisseur, nom_fournisseur, contact, telephone, email, adresse, notes FROM newroseclaire.fournisseurs
-WHERE actif = true;
+SELECT id_fournisseur, nom_fournisseur, contact, telephone, email, adresse, notes, actif FROM newroseclaire.fournisseurs
+--WHERE actif = true;

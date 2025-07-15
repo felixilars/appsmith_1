@@ -7,13 +7,8 @@ SELECT
   mp.prix_achat_ht,
   mp.stock_minimal,
   f.nom_fournisseur
-FROM 
-  newroseclaire.matieres_premieres AS mp
-LEFT JOIN 
-  newroseclaire.unites AS u ON mp.id_unite = u.id_unite
-LEFT JOIN 
-  newroseclaire.fournisseurs AS f ON mp.id_fournisseur = f.id_fournisseur
-WHERE 
-  mp.actif = true
-ORDER BY 
-  mp.nom;
+FROM newroseclaire.matieres_premieres AS mp
+LEFT JOIN newroseclaire.unites AS u ON mp.id_unite = u.id_unite
+LEFT JOIN newroseclaire.fournisseurs AS f ON mp.id_fournisseur = f.id_fournisseur
+WHERE mp.actif = true
+ORDER BY mp.nom;

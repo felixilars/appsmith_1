@@ -36,20 +36,21 @@
     "type_composant",
     "nom_composant",
     "quantite",
+    "unite",
+    "quantite_unitaire",
     "cout_unitaire",
     "cout_total",
     "id_recette_finale",
     "nom_recette",
-    "quantite_unitaire",
-    "unite"
+    "id_composant"
   ],
-  "columnUpdatedAt": 1752513613023,
+  "columnUpdatedAt": 1752539762225,
   "columnWidthMap": {
     "cout_total": 125,
     "cout_unitaire": 157,
     "nom_composant": 174,
     "quantite": 112,
-    "quantite_unitaire": 166,
+    "quantite_unitaire": 156,
     "type_composant": 157
   },
   "customIsLoading": false,
@@ -99,6 +100,12 @@
     },
     {
       "key": "primaryColumns.unite.computedValue"
+    },
+    {
+      "key": "primaryColumns.unite.selectOptions"
+    },
+    {
+      "key": "primaryColumns.id_composant.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -106,7 +113,14 @@
       "key": "tableData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.quantite.onSubmit"
+    },
+    {
+      "key": "primaryColumns.unite.onOptionChange"
+    }
+  ],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -190,6 +204,40 @@
       "notation": "standard",
       "originalId": "cout_unitaire",
       "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "id_composant": {
+      "alias": "id_composant",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{Table_Ingredients.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id_composant\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "id_composant",
+      "index": 0,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "id_composant",
+      "notation": "standard",
+      "originalId": "id_composant",
+      "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -318,6 +366,7 @@
       "isVisible": true,
       "label": "quantite",
       "notation": "standard",
+      "onSubmit": "",
       "originalId": "quantite",
       "sticky": "",
       "textSize": "0.875rem",
@@ -396,8 +445,8 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{Table_Ingredients.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"unite\"]))}}",
+      "columnType": "select",
+      "computedValue": "{{(() => { const tableData = Table_Ingredients.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.unite )) :  currentRow.unite  })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -406,17 +455,19 @@
       "horizontalAlignment": "LEFT",
       "id": "unite",
       "index": 8,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "unite",
       "notation": "standard",
+      "onOptionChange": "",
       "originalId": "unite",
+      "selectOptions": "{{(() => { const tableData = Table_Ingredients.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( JSObject1.getOptions(currentRow) )) :  JSObject1.getOptions(currentRow)  })()}}",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

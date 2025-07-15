@@ -1,0 +1,8 @@
+UPDATE newroseclaire.unites
+SET 
+  nom_unite = {{ Input_nom.text }},
+  type_unite = {{ Select1.selectedOptionValue }},
+  unite_base = {{ Input_unite_base.text }},
+  facteur_conversion = {{ Input_facteur.text }}
+WHERE id_unite = {{ Table1.selectedRow.id_unite }};
+

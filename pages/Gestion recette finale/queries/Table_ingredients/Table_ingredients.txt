@@ -1,3 +1,12 @@
-SELECT *
-FROM newroseclaire."vue_cout_detaille_recette_finale"
-WHERE nom_recette = '{{ Table1.triggeredRow.nom }}';
+SELECT 
+  c.id_composant,
+  v.*
+FROM newroseclaire.vue_cout_detaille_recette_finale v
+JOIN newroseclaire.composants_recettes_finales c
+  ON c.id_recette_finale = v.id_recette_finale
+  AND (
+    (v.type_composant = 'matiere' AND c.id_matiere_premiere = (SELECT id_matiere_premiere FROM newroseclaire.matieres_premieres WHERE nom = v.nom_composant LIMIT 1))
+    OR
+    (v.type_composant = 'sous_recette' AND c.id_sous_recette = (SELECT id_sous_recette FROM newroseclaire.sous_recettes WHERE nom = v.nom_composant LIMIT 1))
+  )
+WHERE v.nom_recette = '{{ Table1.triggeredRow.nom }}';

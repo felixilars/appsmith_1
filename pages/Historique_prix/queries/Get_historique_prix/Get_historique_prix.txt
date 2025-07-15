@@ -1,0 +1,13 @@
+SELECT 
+  hp.id_historique_prix,
+  mp.nom AS matiere_premiere,
+  f.nom_fournisseur,
+  u.nom_unite,
+  hp.prix,
+  hp.date_effet,
+  hp.notes
+FROM newroseclaire.historique_prix hp
+JOIN newroseclaire.matieres_premieres mp ON hp.id_matiere_premiere = mp.id_matiere_premiere
+JOIN newroseclaire.unites u ON hp.id_unite = u.id_unite
+JOIN newroseclaire.fournisseurs f ON hp.id_fournisseur = f.id_fournisseur
+ORDER BY hp.date_effet DESC;

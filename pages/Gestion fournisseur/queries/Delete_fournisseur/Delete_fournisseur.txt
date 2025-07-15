@@ -1,2 +1,6 @@
 DELETE FROM newroseclaire.fournisseurs
 WHERE id_fournisseur = {{Table1.triggeredRow.id_fournisseur}};
+
+--UPDATE newroseclaire.fournisseurs
+--SET actif = false
+--WHERE id_fournisseur = {{ this.params.id_fournisseur }};

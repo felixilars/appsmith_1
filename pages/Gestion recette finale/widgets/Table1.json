@@ -133,6 +133,8 @@
   "mobileTopRow": 15,
   "needsErrorInfo": false,
   "onRowSelected": "{{Table_ingredients.run()}}",
+  "originalBottomRow": 77,
+  "originalTopRow": 14,
   "parentColumnSpace": 14.234375,
   "parentId": "0",
   "parentRowSpace": 10,

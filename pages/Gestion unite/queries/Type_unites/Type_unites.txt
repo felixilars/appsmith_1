@@ -1,0 +1,2 @@
+SELECT DISTINCT type_unite FROM newroseclaire.unites
+WHERE type_unite IS NOT NULL;

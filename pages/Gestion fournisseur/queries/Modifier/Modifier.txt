@@ -1,0 +1,10 @@
+UPDATE newroseclaire.fournisseurs
+SET 
+  nom_fournisseur = {{ Input_nom.text }},
+  contact = {{ Input_contact.text }},
+  telephone = {{ Input_telephone.text }},
+  email = {{ Input_email.text }},
+  adresse = {{ Input_adresse.text }},
+  notes = {{ Input_notes.text }},
+  actif = {{ Actif.isSwitchedOn }}
+WHERE id_fournisseur = {{ Table1.selectedRow.id_fournisseur }};

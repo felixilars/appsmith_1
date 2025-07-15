@@ -1,0 +1,4 @@
+UPDATE newroseclaire.recettes_finales
+SET nom = '{{ this.params.nom }}',
+    description = '{{ this.params.description }}'
+WHERE id_recette_finale = {{ this.params.id_recette_finale }};

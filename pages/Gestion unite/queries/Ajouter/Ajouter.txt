@@ -1,0 +1,9 @@
+INSERT INTO newroseclaire.unites (
+  nom_unite, type_unite, unite_base, facteur_conversion
+)
+VALUES (
+  {{ Input_nom.text }},
+	{{ Select1.selectedOptionValue }},
+  {{ Input_unite_base.text }},
+  {{ Input_facteur.text }}
+);

@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "DELETE FROM newroseclaire.fournisseurs\nWHERE id_fournisseur = {{Table1.triggeredRow.id_fournisseur}};",
+      "body": "DELETE FROM newroseclaire.fournisseurs\nWHERE id_fournisseur = {{Table1.triggeredRow.id_fournisseur}};\n\n--UPDATE newroseclaire.fournisseurs\n--SET actif = false\n--WHERE id_fournisseur = {{ this.params.id_fournisseur }};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

@@ -1,0 +1,4 @@
+SELECT 
+  COUNT(*) AS total,
+  COUNT(*) FILTER (WHERE actif = true) AS actif
+FROM newroseclaire.fournisseurs;

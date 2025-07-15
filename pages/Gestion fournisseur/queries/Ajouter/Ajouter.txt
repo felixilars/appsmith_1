@@ -1,0 +1,12 @@
+INSERT INTO newroseclaire.fournisseurs (
+  nom_fournisseur, contact, telephone, email, adresse, notes, actif
+)
+VALUES (
+  {{ Input_nom.text }},
+  {{ Input_contact.text }},
+  {{ Input_telephone.text }},
+  {{ Input_email.text }},
+  {{ Input_adresse.text }},
+  {{ Input_notes.text }},
+  {{ Actif.isSwitchedOn }}
+);

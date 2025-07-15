@@ -1,0 +1,48 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "bottomRow": 22,
+  "boxShadow": "none",
+  "defaultSwitchState": "{{Table1.triggeredRow.actif == true}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "9r1ryit3do",
+  "label": "Actif",
+  "labelPosition": "Left",
+  "leftColumn": 49,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 40,
+  "mobileLeftColumn": 49,
+  "mobileRightColumn": 61,
+  "mobileTopRow": 36,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 14.341796875,
+  "parentId": "k1ldq0q5ke",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 61,
+  "topRow": 18,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "t4czq6t2eq",
+  "widgetName": "ActifCopy"
+}
