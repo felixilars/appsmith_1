@@ -6,6 +6,7 @@ SELECT
   u.nom_unite AS unite,
   mp.prix_achat_ht,
   mp.stock_minimal,
+	mp.quantite_unite,
   f.nom_fournisseur
 FROM newroseclaire.matieres_premieres AS mp
 LEFT JOIN newroseclaire.unites AS u ON mp.id_unite = u.id_unite

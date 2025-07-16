@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 35,
   "boxShadow": "none",
-  "defaultText": "{{Table1.triggeredRow.stock_minimal}}",
+  "defaultText": "{{Table1.triggeredRow.quantite_unite}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -26,13 +26,13 @@
   "isRequired": false,
   "isVisible": true,
   "key": "vxhswl9ck0",
-  "label": "Stock",
+  "label": "Quantite_unite",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 1,
+  "leftColumn": 28,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -47,12 +47,12 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 21,
+  "rightColumn": 48,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
   "topRow": 28,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "2mp24k3abg",
-  "widgetName": "Input_stock"
+  "widgetId": "eb6cq7ujd2",
+  "widgetName": "Input_quantite_unite"
 }

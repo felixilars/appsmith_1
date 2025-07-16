@@ -6,5 +6,6 @@ SET
   prix_achat_ht = {{ Input_prix.text }},
   stock_minimal = {{ Input_stock.text }},
   id_unite = {{ Select_unite.selectedOptionValue }},
-  id_fournisseur = {{ Select_fournisseur.selectedOptionValue }}
+  id_fournisseur = {{ Select_fournisseur.selectedOptionValue }},
+	quantite_unite = {{ Input_quantite_unite.text }}
 WHERE id_matiere_premiere = {{ Table1.triggeredRow.id_matiere_premiere }};

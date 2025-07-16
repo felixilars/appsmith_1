@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  mp.id_matiere_premiere,\n  mp.nom,\n  mp.description,\n  mp.categorie,\n  u.nom_unite AS unite,\n  mp.prix_achat_ht,\n  mp.stock_minimal,\n  f.nom_fournisseur\nFROM newroseclaire.matieres_premieres AS mp\nLEFT JOIN newroseclaire.unites AS u ON mp.id_unite = u.id_unite\nLEFT JOIN newroseclaire.fournisseurs AS f ON mp.id_fournisseur = f.id_fournisseur\nWHERE mp.actif = true\nORDER BY mp.nom;\n",
+      "body": "SELECT \n  mp.id_matiere_premiere,\n  mp.nom,\n  mp.description,\n  mp.categorie,\n  u.nom_unite AS unite,\n  mp.prix_achat_ht,\n  mp.stock_minimal,\n\tmp.quantite_unite,\n  f.nom_fournisseur\nFROM newroseclaire.matieres_premieres AS mp\nLEFT JOIN newroseclaire.unites AS u ON mp.id_unite = u.id_unite\nLEFT JOIN newroseclaire.fournisseurs AS f ON mp.id_fournisseur = f.id_fournisseur\nWHERE mp.actif = true\nORDER BY mp.nom;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

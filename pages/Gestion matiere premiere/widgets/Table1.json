@@ -38,17 +38,19 @@
     "description",
     "categorie",
     "prix_achat_ht",
+    "quantite_unite",
     "unite",
     "stock_minimal",
     "nom_fournisseur",
     "customColumn2",
     "customColumn1"
   ],
-  "columnUpdatedAt": 1752703629123,
+  "columnUpdatedAt": 1752704990379,
   "columnWidthMap": {
     "customColumn2": 85,
     "nom_fournisseur": 159,
     "prix_achat_ht": 135,
+    "quantite_unite": 143,
     "unite": 83
   },
   "customIsLoading": false,
@@ -107,6 +109,9 @@
     },
     {
       "key": "primaryColumns.customColumn2.boxShadow"
+    },
+    {
+      "key": "primaryColumns.quantite_unite.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -410,6 +415,40 @@
       "notation": "standard",
       "originalId": "prix_achat_ht",
       "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "quantite_unite": {
+      "alias": "quantite_unite",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"quantite_unite\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "quantite_unite",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "quantite_unite",
+      "notation": "standard",
+      "originalId": "quantite_unite",
+      "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
