@@ -1,0 +1,3 @@
+SELECT id_unite, nom_unite
+FROM unites
+WHERE type_unite = '{{Table2.triggeredRow.type_unite}}';

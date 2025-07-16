@@ -1,0 +1,10 @@
+UPDATE newroseclaire.matieres_premieres
+SET 
+  nom = {{ Input_nom.text }},
+  description = {{ Input_description.text }},
+  categorie = {{ Select_categorie.selectedOptionValue }},
+  prix_achat_ht = {{ Input_prix.text }},
+  stock_minimal = {{ Input_stock.text }},
+  id_unite = {{ Select_unite.selectedOptionValue }},
+  id_fournisseur = {{ Select_fournisseur.selectedOptionValue }}
+WHERE id_matiere_premiere = {{ Table1.triggeredRow.id_matiere_premiere }};

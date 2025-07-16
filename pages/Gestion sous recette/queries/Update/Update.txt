@@ -1,0 +1,4 @@
+UPDATE newroseclaire.composants_sous_recettes
+SET quantite_unite = {{ this.params.quantite_unite }},
+		id_unite = {{ this.params.id_unite }}
+WHERE id_composant = {{ this.params.id_composant }};

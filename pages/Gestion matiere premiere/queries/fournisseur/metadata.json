@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "683e21591b989748a426a418_d60ac9b0-9e4f-4d32-81cc-fbd04545c1fa",
-  "id": "Gestion sous recette_Query1",
+  "gitSyncId": "683e21591b989748a426a418_0b927cdc-a1cb-4a9d-a203-4a3769e34e66",
+  "id": "Gestion matiere premiere_fournisseur",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM newroseclaire.\"sous_recettes\"\nWHERE actif = true\nORDER by nom;",
+      "body": "SELECT id_fournisseur, nom_fournisseur FROM newroseclaire.\"fournisseurs\" \nWHERE actif is TRUE\nORDER by id_fournisseur",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "Query1",
-    "pageId": "Gestion sous recette",
-    "runBehaviour": "MANUAL",
+    "name": "fournisseur",
+    "pageId": "Gestion matiere premiere",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }
 }

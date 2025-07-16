@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "683e21591b989748a426a418_9d2876d1-8163-4833-8a7d-f31b3fe62825",
-  "id": "Gestion sous recette_Liste_sous_recette",
+  "gitSyncId": "683e21591b989748a426a418_165fdc04-585d-4d40-bdc2-3d5c10b51347",
+  "id": "Gestion matiere premiere_unite",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  sr.id_sous_recette,\n  sr.nom,\n  sr.description,\n  sr.quantite_produite,\n  u.nom_unite\nFROM newroseclaire.sous_recettes sr\nJOIN newroseclaire.unites u ON sr.id_unite = u.id_unite\nWHERE sr.actif = true\nORDER by nom\n",
+      "body": "SELECT id_unite, nom_unite FROM newroseclaire.\"unites\"",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,8 +23,8 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "Liste_sous_recette",
-    "pageId": "Gestion sous recette",
+    "name": "unite",
+    "pageId": "Gestion matiere premiere",
     "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }

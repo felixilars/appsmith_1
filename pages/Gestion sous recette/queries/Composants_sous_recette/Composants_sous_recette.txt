@@ -1,0 +1,12 @@
+SELECT 
+  c.id_composant,
+  c.id_matiere_premiere,
+  m.nom AS nom_matiere,
+  c.quantite_unite,
+  c.id_unite,
+  u.nom_unite,
+  u.type_unite
+FROM newroseclaire.composants_sous_recettes c
+JOIN newroseclaire.matieres_premieres m ON m.id_matiere_premiere = c.id_matiere_premiere
+JOIN newroseclaire.unites u ON u.id_unite = c.id_unite
+WHERE c.id_sous_recette = {{ Table1.triggeredRow.id_sous_recette }};

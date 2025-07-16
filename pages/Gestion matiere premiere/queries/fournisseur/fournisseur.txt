@@ -1,0 +1,3 @@
+SELECT id_fournisseur, nom_fournisseur FROM newroseclaire."fournisseurs" 
+WHERE actif is TRUE
+ORDER by id_fournisseur

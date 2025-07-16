@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "683e21591b989748a426a418_9d2876d1-8163-4833-8a7d-f31b3fe62825",
-  "id": "Gestion sous recette_Liste_sous_recette",
+  "gitSyncId": "683e21591b989748a426a418_e944921a-1c1e-44e6-8ee4-0b14c8f35cf3",
+  "id": "Gestion sous recette_UniteByType",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  sr.id_sous_recette,\n  sr.nom,\n  sr.description,\n  sr.quantite_produite,\n  u.nom_unite\nFROM newroseclaire.sous_recettes sr\nJOIN newroseclaire.unites u ON sr.id_unite = u.id_unite\nWHERE sr.actif = true\nORDER by nom\n",
+      "body": "SELECT id_unite, nom_unite\nFROM unites\nWHERE type_unite = '{{Table2.triggeredRow.type_unite}}';",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,10 +22,14 @@
       "name": "roseclaire database",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "name": "Liste_sous_recette",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "UniteByType",
     "pageId": "Gestion sous recette",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
