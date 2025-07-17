@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "683e21591b989748a426a418_1e28a9a2-69e6-4bbf-a170-b0c1cbfd27ab",
-  "id": "Gestion sous recette_JSObject1.saveToDatabase",
+  "gitSyncId": "683e21591b989748a426a418_f0ae8117-71c5-47b9-8801-c57c46d799fc",
+  "id": "Gestion sous recette_JSObject1.getTotalCost",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -22,8 +22,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "JSObject1.saveToDatabase",
-    "name": "saveToDatabase",
+    "fullyQualifiedName": "JSObject1.getTotalCost",
+    "name": "getTotalCost",
     "pageId": "Gestion sous recette",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

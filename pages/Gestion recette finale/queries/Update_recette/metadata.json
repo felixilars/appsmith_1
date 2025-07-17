@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE newroseclaire.recettes_finales\nSET nom = '{{ this.params.nom }}',\n    description = '{{ this.params.description }}'\nWHERE id_recette_finale = {{ this.params.id_recette_finale }};",
+      "body": "UPDATE newroseclaire.recettes_finales\nSET nom = {{ Input_nom1.text }},\n    description = {{ Input_description1.text }},\n\t\tquantite_produite = {{ Input_quantite.text }},\n\t\tid_unite = {{ Select1.selectedOptionValue }}\nWHERE id_recette_finale = {{ Table1.triggeredRow.id_recette_finale }};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

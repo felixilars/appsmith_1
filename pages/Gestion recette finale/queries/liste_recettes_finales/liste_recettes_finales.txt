@@ -1,3 +1,12 @@
-SELECT * FROM newroseclaire."recettes_finales"
-WHERE actif = true
-ORDER BY nom;
+SELECT 
+  rf.id_recette_finale,
+  rf.nom,
+  rf.description,
+  rf.quantite_produite,
+  u.nom_unite AS unite,
+  rf.prix_vente,
+  rf.coefficient_multiplicateur
+FROM newroseclaire."recettes_finales" rf
+LEFT JOIN newroseclaire.unites u ON rf.id_unite = u.id_unite
+WHERE rf.actif = true
+ORDER BY rf.nom;

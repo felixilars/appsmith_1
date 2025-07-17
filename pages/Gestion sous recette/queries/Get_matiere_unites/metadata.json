@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "683e21591b989748a426a418_dbb6a6b9-b657-46b4-b434-656954666471",
-  "id": "Gestion recette finale_Unites",
+  "gitSyncId": "683e21591b989748a426a418_e944921a-1c1e-44e6-8ee4-0b14c8f35cf3",
+  "id": "Gestion sous recette_Get_matiere_unites",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id_unite, nom_unite, type_unite\nFROM newroseclaire.unites;\n",
+      "body": "SELECT \n  id_matiere_premiere,\n  prix_achat_ht,\n  quantite_unite\nFROM newroseclaire.matieres_premieres\nWHERE actif = true;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "Unites",
-    "pageId": "Gestion recette finale",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": true
+    "name": "Get_matiere_unites",
+    "pageId": "Gestion sous recette",
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": false
   }
 }

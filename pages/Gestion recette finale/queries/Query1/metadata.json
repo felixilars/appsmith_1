@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "683e21591b989748a426a418_dbb6a6b9-b657-46b4-b434-656954666471",
-  "id": "Gestion recette finale_Unites",
+  "gitSyncId": "683e21591b989748a426a418_db0a67da-5486-4f52-b74f-4640a964d656",
+  "id": "Gestion recette finale_Query1",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id_unite, nom_unite, type_unite\nFROM newroseclaire.unites;\n",
+      "body": "SELECT * FROM newroseclaire.\"composants_recettes_finales\" \nWHERE id_recette_finale = 12\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "Unites",
+    "name": "Query1",
     "pageId": "Gestion recette finale",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": true
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": false
   }
 }

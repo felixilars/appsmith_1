@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "683e21591b989748a426a418_e944921a-1c1e-44e6-8ee4-0b14c8f35cf3",
-  "id": "Gestion sous recette_UniteByType",
+  "gitSyncId": "683e21591b989748a426a418_285780d6-07ac-4501-aa52-2e27f9b1c2ef",
+  "id": "Gestion sous recette_Update_sous_recette",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id_unite, nom_unite\nFROM unites\nWHERE type_unite = '{{Table2.triggeredRow.type_unite}}';",
+      "body": "UPDATE newroseclaire.sous_recettes\nSET nom = {{Input_nom.text}},\n\t\tdescription = {{Input_description.text}},\n\t\tquantite_produite = {{Input_quantite.text}}\nWHERE id_sous_recette = {{ Table1.triggeredRow.id_sous_recette }};\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "UniteByType",
+    "name": "Update_sous_recette",
     "pageId": "Gestion sous recette",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

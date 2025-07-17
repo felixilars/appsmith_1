@@ -1,8 +1,4 @@
 UPDATE newroseclaire.composants_recettes_finales
-SET quantite_unite = 1,
-    id_unite = (
-      SELECT id_unite FROM newroseclaire.unites
-      WHERE nom_unite = 'pce'
-      LIMIT 1
-    )
+SET quantite_unite = {{ this.params.quantite_unite }},
+    id_unite = {{ this.params.id_unite }}
 WHERE id_composant = {{ this.params.id_composant }};

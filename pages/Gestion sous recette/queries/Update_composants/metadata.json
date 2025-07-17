@@ -1,6 +1,6 @@
 {
   "gitSyncId": "683e21591b989748a426a418_dcc8d6df-854d-484c-a39d-15430dbd74d3",
-  "id": "Gestion sous recette_Update",
+  "id": "Gestion sous recette_Update_composants",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "Update",
+    "name": "Update_composants",
     "pageId": "Gestion sous recette",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

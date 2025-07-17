@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  c.id_composant,\n  c.id_matiere_premiere,\n  m.nom AS nom_matiere,\n  c.quantite_unite,\n  c.id_unite,\n  u.nom_unite,\n  u.type_unite\nFROM newroseclaire.composants_sous_recettes c\nJOIN newroseclaire.matieres_premieres m ON m.id_matiere_premiere = c.id_matiere_premiere\nJOIN newroseclaire.unites u ON u.id_unite = c.id_unite\nWHERE c.id_sous_recette = {{ Table1.triggeredRow.id_sous_recette }};\n",
+      "body": "SELECT \n  csr.id_composant,\n  csr.id_sous_recette,\n  csr.id_matiere_premiere,\n  csr.quantite_unite,\n  csr.id_unite,\n  u.nom_unite,\n  u.type_unite,\n  mp.nom AS nom_matiere,\n  mp.prix_achat_ht,\n  mp.quantite_unite AS quantite_unitaire\nFROM newroseclaire.composants_sous_recettes csr\nJOIN newroseclaire.matieres_premieres mp ON csr.id_matiere_premiere = mp.id_matiere_premiere\nJOIN newroseclaire.unites u ON csr.id_unite = u.id_unite\nWHERE csr.id_sous_recette = {{ Table1.triggeredRow.id_sous_recette }};\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

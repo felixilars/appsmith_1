@@ -40,8 +40,9 @@
     "customColumn2",
     "customColumn1"
   ],
-  "columnUpdatedAt": 1752697112797,
+  "columnUpdatedAt": 1752705514556,
   "columnWidthMap": {
+    "facteur_conversion": 220,
     "nom_fournisseur": 161
   },
   "customIsLoading": false,
@@ -261,7 +262,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "id_unite",
       "notation": "standard",
       "originalId": "id_unite",

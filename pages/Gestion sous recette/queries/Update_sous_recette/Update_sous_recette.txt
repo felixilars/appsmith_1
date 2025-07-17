@@ -1,0 +1,5 @@
+UPDATE newroseclaire.sous_recettes
+SET nom = {{Input_nom.text}},
+		description = {{Input_description.text}},
+		quantite_produite = {{Input_quantite.text}}
+WHERE id_sous_recette = {{ Table1.triggeredRow.id_sous_recette }};

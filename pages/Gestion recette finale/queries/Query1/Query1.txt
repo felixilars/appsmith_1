@@ -1,0 +1,2 @@
+SELECT * FROM newroseclaire."composants_recettes_finales" 
+WHERE id_recette_finale = 12

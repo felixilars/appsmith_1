@@ -1,12 +1,19 @@
 {
-  "gitSyncId": "683e21591b989748a426a418_e99a4a9d-10b1-4cd9-98a4-de6b863726eb",
-  "id": "Gestion sous recette_JSObject1.enrichData",
+  "gitSyncId": "683e21591b989748a426a418_1772eb8a-5fb5-4343-a533-f2c17ee65d99",
+  "id": "Gestion sous recette_JSObject1.updateQuantite",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
     "actionConfiguration": {
       "encodeParamsToggle": true,
-      "jsArguments": [],
+      "jsArguments": [
+        {
+          "name": "id_composant"
+        },
+        {
+          "name": "newQty"
+        }
+      ],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },
@@ -22,8 +29,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "JSObject1.enrichData",
-    "name": "enrichData",
+    "fullyQualifiedName": "JSObject1.updateQuantite",
+    "name": "updateQuantite",
     "pageId": "Gestion sous recette",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

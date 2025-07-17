@@ -1,0 +1,6 @@
+SELECT 
+  id_matiere_premiere,
+  prix_achat_ht,
+  quantite_unite
+FROM newroseclaire.matieres_premieres
+WHERE actif = true;

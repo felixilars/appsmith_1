@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM newroseclaire.\"recettes_finales\"\nWHERE actif = true\nORDER BY nom;",
+      "body": "SELECT \n  rf.id_recette_finale,\n  rf.nom,\n  rf.description,\n  rf.quantite_produite,\n  u.nom_unite AS unite,\n  rf.prix_vente,\n  rf.coefficient_multiplicateur\nFROM newroseclaire.\"recettes_finales\" rf\nLEFT JOIN newroseclaire.unites u ON rf.id_unite = u.id_unite\nWHERE rf.actif = true\nORDER BY rf.nom;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

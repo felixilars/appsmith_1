@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id_unite, nom_unite, type_unite FROM newroseclaire.unites;",
+      "body": "SELECT * FROM newroseclaire.unites;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -26,6 +26,6 @@
     "name": "Unite",
     "pageId": "Gestion sous recette",
     "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }
