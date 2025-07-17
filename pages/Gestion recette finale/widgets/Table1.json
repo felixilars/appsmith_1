@@ -32,22 +32,22 @@
     }
   },
   "columnOrder": [
-    "id_recette_finale",
     "nom",
     "description",
     "prix_vente",
+    "id_recette_finale",
     "quantite_produite",
     "coefficient_multiplicateur",
     "unite",
     "customColumn1",
     "customColumn2"
   ],
-  "columnUpdatedAt": 1752776104179,
+  "columnUpdatedAt": 1752778153695,
   "columnWidthMap": {
     "coefficient_multiplicateur": 131,
     "customColumn1": 90,
     "description": 182,
-    "nom": 275
+    "nom": 117
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -264,7 +264,7 @@
     },
     "description": {
       "alias": "description",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
       "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"description\"]))}}",
@@ -313,7 +313,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "id_recette_finale",
       "notation": "standard",
       "originalId": "id_recette_finale",
@@ -326,7 +326,7 @@
     },
     "nom": {
       "alias": "nom",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
       "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nom\"]))}}",
@@ -388,7 +388,7 @@
     },
     "quantite_produite": {
       "alias": "quantite_produite",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "number",
@@ -409,7 +409,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "quantite_produite",
+      "label": "quantite produite",
       "notation": "standard",
       "originalId": "quantite_produite",
       "sticky": "",
