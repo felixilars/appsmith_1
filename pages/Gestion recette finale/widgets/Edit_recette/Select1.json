@@ -48,6 +48,8 @@
   "needsErrorInfo": false,
   "optionLabel": "nom_unite",
   "optionValue": "id_unite",
+  "originalBottomRow": 30,
+  "originalTopRow": 23,
   "parentColumnSpace": 19.228125,
   "parentId": "hnrsikahl2",
   "parentRowSpace": 10,
