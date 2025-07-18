@@ -1,3 +1,3 @@
 INSERT INTO newroseclaire.sous_recettes (nom, description, quantite_produite, id_unite, actif)
-VALUES ('{{Input_nom.text}}', '{{Input_description.text}}', {{Input_quantite.text}}, 2, {{Actif.isSwitchedOn}})
+VALUES ('{{Input_nom.text}}', '{{Input_description.text}}', {{Input_quantite.text}}, {{Select1.selectedOptionValue}} , {{Actif.isSwitchedOn}})
 RETURNING id_sous_recette;

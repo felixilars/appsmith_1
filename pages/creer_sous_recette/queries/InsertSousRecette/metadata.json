@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO newroseclaire.sous_recettes (nom, description, quantite_produite, id_unite, actif)\nVALUES ('{{Input_nom.text}}', '{{Input_description.text}}', {{Input_quantite.text}}, 2, {{Actif.isSwitchedOn}})\nRETURNING id_sous_recette;",
+      "body": "INSERT INTO newroseclaire.sous_recettes (nom, description, quantite_produite, id_unite, actif)\nVALUES ('{{Input_nom.text}}', '{{Input_description.text}}', {{Input_quantite.text}}, {{Select1.selectedOptionValue}} , {{Actif.isSwitchedOn}})\nRETURNING id_sous_recette;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

@@ -90,7 +90,7 @@ export default {
 	},
 
 	checkAndSave: async () => {
-		if (!Input_nom.text || !Input_prix.text || !appsmith.store.tempTableData.length) {
+		if (!Input_nom.text || !appsmith.store.tempTableData.length) {
 			showAlert("Veuillez remplir tous les champs obligatoires", "error");
 			return;
 		}

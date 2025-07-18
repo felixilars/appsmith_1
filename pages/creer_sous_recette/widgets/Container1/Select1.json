@@ -1,57 +1,62 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
-  "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 9,
+  "bottomRow": 19,
   "boxShadow": "none",
-  "defaultText": "",
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
   "dynamicTriggerPathList": [],
-  "iconAlign": "left",
-  "inputType": "NUMBER",
   "isDisabled": false,
+  "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "dwk9w42ic9",
-  "label": "Prix",
+  "key": "e9vsg7v1so",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelStyle": "",
+  "labelText": "Unite",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 44,
+  "leftColumn": 28,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 21,
-  "mobileLeftColumn": 1,
-  "mobileRightColumn": 21,
-  "mobileTopRow": 14,
+  "mobileBottomRow": 19,
+  "mobileLeftColumn": 28,
+  "mobileRightColumn": 48,
+  "mobileTopRow": 12,
   "needsErrorInfo": false,
-  "originalBottomRow": 58,
-  "originalTopRow": 51,
-  "parentColumnSpace": 18.98828125,
-  "parentId": "pnoqih3c7p",
+  "optionLabel": "nom_unite",
+  "optionValue": "id_unite",
+  "parentColumnSpace": 19.3046875,
+  "parentId": "w8nyvhswvx",
   "parentRowSpace": 10,
+  "placeholderText": "Select option",
   "renderMode": "CANVAS",
-  "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
-  "shouldAllowAutofill": false,
-  "showStepArrows": false,
-  "topRow": 2,
-  "type": "INPUT_WIDGET_V2",
-  "version": 2,
-  "widgetId": "uaqt05z7kw",
-  "widgetName": "Input_prix"
+  "rightColumn": 48,
+  "serverSideFiltering": false,
+  "sourceData": "{{Unite.data}}",
+  "topRow": 12,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "jpb7f4uvue",
+  "widgetName": "Select1"
 }
