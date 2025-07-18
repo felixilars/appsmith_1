@@ -146,6 +146,21 @@ export default {
 		});
 
 		storeValue("tempTableData", updated);
+	},
+	updateQuantite(id, type, new_quantite) {
+		const table = appsmith.store.tempTableData || [];
+
+		const updated = table.map(row => {
+			if (row.id === id && row.type === type) {
+				return {
+					...row,
+					quantite: new_quantite
+				};
+			}
+			return row;
+		});
+
+		storeValue("tempTableData", updated);
 	}
 };
 

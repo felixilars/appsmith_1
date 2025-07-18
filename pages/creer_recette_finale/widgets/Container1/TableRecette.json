@@ -317,7 +317,7 @@
       "isVisible": true,
       "label": "quantite",
       "notation": "standard",
-      "onSubmit": "{{ \n  (() => {\n    const updatedRow = TableRecette.updatedRow;\n    const data = [...appsmith.store.recette_composants_temp];\n\n    const index = data.findIndex(item => \n      item.id === updatedRow.id && item.type === updatedRow.type\n    );\n\n    if (index !== -1) {\n      data[index] = { ...data[index], quantite: updatedRow.quantite };\n      storeValue(\"recette_composants_temp\", data);\n    }\n  })() \n}}\n",
+      "onSubmit": "{{ JSObject1.updateQuantite(currentRow.id, currentRow.type, currentRow.quantite) }}\n",
       "originalId": "quantite",
       "sticky": "",
       "textSize": "0.875rem",

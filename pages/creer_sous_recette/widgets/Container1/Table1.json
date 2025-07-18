@@ -39,9 +39,10 @@
     "id_matiere_premiere",
     "type_unite",
     "nom_unite",
-    "unite_options"
+    "unite_options",
+    "unite"
   ],
-  "columnUpdatedAt": 1752506448444,
+  "columnUpdatedAt": 1752862817549,
   "columnWidthMap": {
     "nom_matiere_premiere": 282
   },
@@ -89,6 +90,9 @@
     },
     {
       "key": "primaryColumns.unite_options.computedValue"
+    },
+    {
+      "key": "primaryColumns.unite.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -100,6 +104,9 @@
     },
     {
       "key": "primaryColumns.id_unite.onOptionChange"
+    },
+    {
+      "key": "primaryColumns.quantite.onSubmit"
     }
   ],
   "dynamicTriggerPathList": [
@@ -108,6 +115,9 @@
     },
     {
       "key": "primaryColumns.id_unite.onOptionChange"
+    },
+    {
+      "key": "primaryColumns.quantite.onSubmit"
     }
   ],
   "enableClientSideSearch": true,
@@ -236,7 +246,7 @@
       "isVisible": true,
       "label": "id_unite",
       "notation": "standard",
-      "onOptionChange": "{{ JSObject2.updateUniteSelection(currentRow.id_matiere_premiere, currentRow.id_unite) }}",
+      "onOptionChange": "{{ JSObject1.updateUniteSelection(currentRow.id_matiere_premiere, currentRow.id_unite) }}",
       "originalId": "id_unite",
       "selectOptions": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\ncurrentRow.unite_options.map(u => ({\n  label: u.nom_unite,\n  value: u.id_unite\n}))\n\n)) : \ncurrentRow.unite_options.map(u => ({\n  label: u.nom_unite,\n  value: u.id_unite\n}))\n\n })()}}",
       "sticky": "",
@@ -338,6 +348,7 @@
       "isVisible": true,
       "label": "quantite",
       "notation": "standard",
+      "onSubmit": "{{ JSObject1.updateQuantite(currentRow.id_matiere_premiere, currentRow.quantite) }}\n",
       "originalId": "quantite",
       "sticky": "",
       "textSize": "0.875rem",
@@ -372,6 +383,40 @@
       "label": "type_unite",
       "notation": "standard",
       "originalId": "type_unite",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "unite": {
+      "alias": "unite",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"unite\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "unite",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "unite",
+      "notation": "standard",
+      "originalId": "unite",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

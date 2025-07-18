@@ -32,7 +32,7 @@
   "mobileRightColumn": 44,
   "mobileTopRow": 41,
   "needsErrorInfo": false,
-  "onClick": "{{JSObject2.addMatiere();}}",
+  "onClick": "{{JSObject1.addMatiere();}}",
   "originalBottomRow": 37,
   "originalTopRow": 33,
   "parentColumnSpace": 20.25,
