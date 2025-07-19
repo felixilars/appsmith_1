@@ -1,0 +1,3 @@
+SELECT * 
+FROM newroseclaire.recettes_finales
+WHERE id_recette_finale = {{ appsmith.URL.queryParams.id_recette_finale }};

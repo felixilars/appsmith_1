@@ -37,7 +37,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{\nawait Delete_composants_sous_recette.run();\nawait Delete_sous_recette.run();\nawait Liste_sous_recette.run();\ncloseModal(Delete.name);\n}}",
+  "onClick": "{{\nawait Delete_all.run();\nawait Liste_sous_recette.run();\ncloseModal(Delete.name);\n}}",
   "originalBottomRow": 22,
   "originalTopRow": 18,
   "parentId": "8esb3kr8t1",

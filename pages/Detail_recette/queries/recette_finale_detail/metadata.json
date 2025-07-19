@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "683e21591b989748a426a418_3c399587-6931-435d-a07e-4e29ce891854",
-  "id": "Gestion sous recette_Delete_composants_sous_recette",
+  "gitSyncId": "683e21591b989748a426a418_71c8400a-370f-48f0-9e0d-0d01b0274ba2",
+  "id": "Detail_recette_recette_finale_detail",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "DELETE FROM newroseclaire.composants_sous_recettes WHERE id_sous_recette = '{{ Table1.triggeredRow.id_sous_recette }}';",
+      "body": "SELECT * \nFROM newroseclaire.recettes_finales\nWHERE id_recette_finale = {{ appsmith.URL.queryParams.id_recette_finale }};\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "name": "Delete_composants_sous_recette",
-    "pageId": "Gestion sous recette",
-    "runBehaviour": "MANUAL",
+    "name": "recette_finale_detail",
+    "pageId": "Detail_recette",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }
 }

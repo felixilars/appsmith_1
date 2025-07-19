@@ -68,6 +68,10 @@
     {
       "id": "Page1",
       "isDefault": false
+    },
+    {
+      "id": "Detail_recette",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
