@@ -24,5 +24,23 @@ export default {
     };
 
     return [...enriched, footerRow];
+  },
+	compute: () => {
+    const tva = parseFloat(Input_tva.text);
+    const coeff = parseFloat(Input_coeff.text);
+
+    const cost = utils.totalCost();
+    const prix_vente = cost * coeff * (1 + tva / 100);
+
+    const marge_prix = prix_vente > 0 ? ((prix_vente - cost) / prix_vente) * 100 : 0;
+    const marge_cout = cost > 0 ? ((prix_vente - cost) / cost) * 100 : 0;
+    const food_cost = prix_vente > 0 ? (cost / prix_vente) * 100 : 0;
+
+    return {
+      prix_vente,
+      marge_prix,
+      marge_cout,
+      food_cost
+    };
   }
 };
