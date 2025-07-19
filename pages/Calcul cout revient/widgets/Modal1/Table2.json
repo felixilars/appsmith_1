@@ -141,7 +141,7 @@
     },
     "ingredient": {
       "alias": "ingredient",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
       "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"ingredient\"]))}}",
