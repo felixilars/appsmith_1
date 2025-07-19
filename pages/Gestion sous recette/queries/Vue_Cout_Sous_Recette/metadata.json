@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "683e21591b989748a426a418_feb54fb8-551b-4956-acdb-93be7b9bcae5",
-  "id": "Gestion matiere premiere_Query1",
+  "gitSyncId": "683e21591b989748a426a418_a1ca9786-aa37-4140-81cb-af954fc620e8",
+  "id": "Gestion sous recette_Vue_Cout_Sous_Recette",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM newroseclaire.matieres_premieres",
+      "body": "SELECT * FROM newroseclaire.vue_cout_sous_recette;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "Query1",
-    "pageId": "Gestion matiere premiere",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "name": "Vue_Cout_Sous_Recette",
+    "pageId": "Gestion sous recette",
+    "runBehaviour": "ON_PAGE_LOAD",
+    "userSetOnLoad": true
   }
 }

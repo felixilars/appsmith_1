@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE newroseclaire.fournisseurs\nSET \n  nom_fournisseur = {{ Input_nom.text }},\n  contact = {{ Input_contact.text }},\n  telephone = {{ Input_telephone.text }},\n  email = {{ Input_email.text }},\n  adresse = {{ Input_adresse.text }},\n  notes = {{ Input_notes.text }},\n  actif = {{ Actif.isSwitchedOn }}\nWHERE id_fournisseur = {{ Table1.selectedRow.id_fournisseur }};\n",
+      "body": "UPDATE newroseclaire.fournisseurs\nSET \n  nom_fournisseur = {{ Input_nomCopy.text }},\n  contact = {{ Input_contactCopy.text }},\n  telephone = {{ Input_telephoneCopy.text }},\n  email = {{ Input_emailCopy.text }},\n  adresse = {{ Input_adresseCopy.text }},\n  notes = {{ Input_notesCopy.text }},\n  actif = {{ ActifCopy.isSwitchedOn }}\nWHERE id_fournisseur = {{ Table1.triggeredRow.id_fournisseur }};\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

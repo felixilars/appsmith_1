@@ -175,7 +175,7 @@
     },
     "adresse": {
       "alias": "adresse",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
@@ -209,7 +209,7 @@
     },
     "contact": {
       "alias": "contact",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
@@ -321,7 +321,7 @@
     },
     "email": {
       "alias": "email",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
@@ -389,7 +389,7 @@
     },
     "nom_fournisseur": {
       "alias": "nom_fournisseur",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",

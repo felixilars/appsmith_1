@@ -30,6 +30,6 @@
     "name": "vue_cout_recette_finale",
     "pageId": "Calcul cout revient",
     "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }

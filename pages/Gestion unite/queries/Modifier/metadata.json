@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE newroseclaire.unites\nSET \n  nom_unite = {{ Input_nom.text }},\n  type_unite = {{ Select1.selectedOptionValue }},\n  unite_base = {{ Input_unite_base.text }},\n  facteur_conversion = {{ Input_facteur.text }}\nWHERE id_unite = {{ Table1.selectedRow.id_unite }};\n\n",
+      "body": "UPDATE newroseclaire.unites\nSET \n  nom_unite = {{ Input_nomCopy.text }},\n  type_unite = {{ Select1Copy.selectedOptionValue }},\n  unite_base = {{ Input_unite_baseCopy.text }},\n  facteur_conversion = {{ Input_facteurCopy.text }}\nWHERE id_unite = {{ Table1.triggeredRow.id_unite }};\n\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

@@ -29,7 +29,7 @@
     ],
     "name": "vue_cout_sous_recette",
     "pageId": "Calcul cout revient",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "runBehaviour": "ON_PAGE_LOAD",
+    "userSetOnLoad": true
   }
 }

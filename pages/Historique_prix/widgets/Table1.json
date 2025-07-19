@@ -40,7 +40,7 @@
     "date_effet",
     "notes"
   ],
-  "columnUpdatedAt": 1752541499119,
+  "columnUpdatedAt": 1752935539288,
   "columnWidthMap": {
     "date_effet": 199,
     "id_historique_prix": 153,
@@ -194,7 +194,7 @@
     },
     "matiere_premiere": {
       "alias": "matiere_premiere",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
@@ -296,7 +296,7 @@
     },
     "notes": {
       "alias": "notes",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
@@ -367,6 +367,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "searchKey": "",
+  "showInlineEditingOptionDropdown": true,
   "tableData": "{{Get_historique_prix.data}}",
   "textSize": "0.875rem",
   "topRow": 13,

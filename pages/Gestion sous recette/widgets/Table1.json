@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 76,
+  "bottomRow": 79,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -37,10 +37,11 @@
     "id_sous_recette",
     "quantite_produite",
     "nom_unite",
+    "cout_total",
     "customColumn2",
     "customColumn1"
   ],
-  "columnUpdatedAt": 1752698190553,
+  "columnUpdatedAt": 1752939783317,
   "columnWidthMap": {
     "description": 190,
     "nom": 191,
@@ -88,6 +89,9 @@
     },
     {
       "key": "primaryColumns.nom_unite.computedValue"
+    },
+    {
+      "key": "primaryColumns.cout_total.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -124,12 +128,46 @@
   "mobileRightColumn": 41,
   "mobileTopRow": 13,
   "needsErrorInfo": false,
-  "originalBottomRow": 76,
+  "originalBottomRow": 79,
   "originalTopRow": 16,
   "parentColumnSpace": 20.40625,
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
+    "cout_total": {
+      "alias": "cout_total",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.cout_total )) :  currentRow.cout_total  })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "cout_total",
+      "index": 5,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "cout_total",
+      "notation": "standard",
+      "originalId": "cout_total",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "customColumn1": {
       "alias": "Delete",
       "allowCellWrapping": false,
@@ -379,7 +417,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "searchKey": "",
-  "tableData": "{{Liste_sous_recette.data}}",
+  "tableData": "{{JSObject1.enrichSousRecetteList()\n}}",
   "textSize": "0.875rem",
   "topRow": 16,
   "totalRecordsCount": 0,

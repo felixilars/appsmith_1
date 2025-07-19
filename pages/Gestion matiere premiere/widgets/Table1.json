@@ -47,11 +47,15 @@
   ],
   "columnUpdatedAt": 1752704990379,
   "columnWidthMap": {
+    "categorie": 106,
     "customColumn2": 85,
-    "nom_fournisseur": 159,
-    "prix_achat_ht": 135,
-    "quantite_unite": 143,
-    "unite": 83
+    "description": 153,
+    "nom": 130,
+    "nom_fournisseur": 158,
+    "prix_achat_ht": 136,
+    "quantite_unite": 134,
+    "stock_minimal": 138,
+    "unite": 71
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -265,7 +269,7 @@
     },
     "description": {
       "alias": "description",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
       "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"description\"]))}}",
@@ -327,7 +331,7 @@
     },
     "nom": {
       "alias": "nom",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "columnType": "text",
       "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nom\"]))}}",
@@ -358,7 +362,7 @@
     },
     "nom_fournisseur": {
       "alias": "nom_fournisseur",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",

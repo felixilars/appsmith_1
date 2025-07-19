@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17,
+  "bottomRow": 19,
   "boxShadow": "none",
   "defaultText": "{{Table1.triggeredRow.quantite_produite}}",
   "dynamicBindingPathList": [
@@ -50,7 +50,7 @@
   "rightColumn": 21,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 10,
+  "topRow": 12,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "t407v37r3n",

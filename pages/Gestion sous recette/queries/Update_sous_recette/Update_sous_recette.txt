@@ -1,5 +1,6 @@
 UPDATE newroseclaire.sous_recettes
 SET nom = {{Input_nom.text}},
 		description = {{Input_description.text}},
-		quantite_produite = {{Input_quantite.text}}
+		quantite_produite = {{Input_quantite.text}},
+		id_unite = {{Select1.selectedOptionValue}}
 WHERE id_sous_recette = {{ Table1.triggeredRow.id_sous_recette }};

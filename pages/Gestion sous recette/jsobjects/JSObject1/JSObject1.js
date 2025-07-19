@@ -113,5 +113,33 @@ export default {
     }
 
     showAlert("Mise à jour réussie", "success");
+  },
+	getSousRecetteCouts: () => {
+    const table = appsmith.store.tmpTable || [];
+
+    const grouped = table.reduce((acc, row) => {
+      if (!acc[row.id_sous_recette]) {
+        acc[row.id_sous_recette] = 0;
+      }
+      acc[row.id_sous_recette] += row.cout_total || 0;
+      return acc;
+    }, {});
+
+    return grouped; // { "1": 12.4, "2": 6.7, ... }
+  },
+
+  enrichSousRecetteList: () => {
+    const sousRecettes = Liste_sous_recette.data || [];
+    const couts = Vue_Cout_Sous_Recette.data || [];
+
+    return sousRecettes.map(sr => {
+      const match = couts.find(c => c.id_sous_recette === sr.id_sous_recette);
+      return {
+        ...sr,
+        cout_total: match?.cout_total || 0,
+        nom_unite: match?.nom_unite || sr.nom_unite,
+        quantite_produite: match?.quantite_produite || sr.quantite_produit
+      };
+    });
   }
 };

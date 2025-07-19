@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE newroseclaire.sous_recettes\nSET nom = {{Input_nom.text}},\n\t\tdescription = {{Input_description.text}},\n\t\tquantite_produite = {{Input_quantite.text}}\nWHERE id_sous_recette = {{ Table1.triggeredRow.id_sous_recette }};\n",
+      "body": "UPDATE newroseclaire.sous_recettes\nSET nom = {{Input_nom.text}},\n\t\tdescription = {{Input_description.text}},\n\t\tquantite_produite = {{Input_quantite.text}},\n\t\tid_unite = {{Select1.selectedOptionValue}}\nWHERE id_sous_recette = {{ Table1.triggeredRow.id_sous_recette }};\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
