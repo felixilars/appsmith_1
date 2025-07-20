@@ -1,5 +1,0 @@
-UPDATE newroseclaire.recettes_finales
-SET nom = 'bento cake',
-		quantite_produite = 2,
-		id_unite = 6
-WHERE id_recette_finale = 12

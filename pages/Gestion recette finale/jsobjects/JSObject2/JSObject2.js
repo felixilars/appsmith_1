@@ -73,7 +73,7 @@ export default {
     storeValue("editRecetteFinaleData", updated);
 
     try {
-      await Delete_composants_recette.run({ id_composant });
+      await Delete_all.run({ id_composant });
       showAlert("Composant supprimé", "success");
     } catch (err) {
       showAlert("Erreur de suppression: " + err.message, "error");

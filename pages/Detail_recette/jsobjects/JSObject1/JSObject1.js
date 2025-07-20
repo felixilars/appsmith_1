@@ -17,7 +17,7 @@ export default {
     const footerRow = {
       type_composant: "TOTAL",
       nom: "",
-      quantite: totalQty,
+      quantite: totalQty.toFixed(3),
       unite: "", 
       cout_total: totalCost,
       cout_pourcent: 100

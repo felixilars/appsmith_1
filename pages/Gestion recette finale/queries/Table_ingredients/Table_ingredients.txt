@@ -5,7 +5,7 @@ SELECT
   u.nom_unite,
   u.type_unite,
 
-  -- Nom & type composant
+  -- Nom and type composant
   CASE 
     WHEN crf.id_matiere_premiere IS NOT NULL THEN mp.nom
     ELSE sr.nom

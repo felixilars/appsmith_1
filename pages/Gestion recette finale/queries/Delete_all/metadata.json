@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "683e21591b989748a426a418_75d37e73-323b-416f-a4ef-07fc558902bb",
-  "id": "Gestion recette finale_Delete_recette_finale",
+  "gitSyncId": "683e21591b989748a426a418_3d0c30b9-32e5-430a-8866-d9d577321b8c",
+  "id": "Gestion recette finale_Delete_all",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "DELETE FROM newroseclaire.recettes_finales WHERE id_recette_finale = '{{ Table1.triggeredRow.id_recette_finale }}';",
+      "body": "DELETE FROM newroseclaire.composants_recettes_finales \nWHERE id_recette_finale = '{{ Table1.triggeredRow.id_recette_finale }}';\n\nDELETE FROM newroseclaire.recettes_finales \nWHERE id_recette_finale = '{{ Table1.triggeredRow.id_recette_finale }}';",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "Delete_recette_finale",
+    "name": "Delete_all",
     "pageId": "Gestion recette finale",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

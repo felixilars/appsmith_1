@@ -1,10 +1,9 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17,
+  "bottomRow": 145,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-  "buttonStyle": "PRIMARY_BUTTON",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
@@ -13,11 +12,6 @@
     },
     {
       "key": "borderRadius"
-    }
-  ],
-  "dynamicPropertyPathList": [
-    {
-      "key": "onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -29,28 +23,30 @@
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "ip5d9wd0q4",
-  "leftColumn": 47,
+  "key": "n08lwla6bc",
+  "leftColumn": 50,
   "minWidth": 120,
-  "mobileBottomRow": 22,
-  "mobileLeftColumn": 47,
-  "mobileRightColumn": 63,
-  "mobileTopRow": 18,
+  "mobileBottomRow": 145,
+  "mobileLeftColumn": 48,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 141,
   "needsErrorInfo": false,
-  "onClick": "{{\nawait Delete_all.run();\nawait liste_recettes_finales.run();\ncloseModal(Delete.name);\n}}",
-  "originalBottomRow": 22,
-  "originalTopRow": 18,
-  "parentId": "kdrpuy3npl",
+  "onClick": "{{navigateTo('Gestion recette finale', {}, 'SAME_WINDOW');}}",
+  "originalBottomRow": 145,
+  "originalTopRow": 141,
+  "parentColumnSpace": 20.25,
+  "parentId": "0",
+  "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 63,
-  "text": "Confirm",
-  "topRow": 13,
+  "rightColumn": 64,
+  "text": "Retour",
+  "topRow": 141,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "cvioee4djt",
-  "widgetName": "Button4"
+  "widgetId": "pgrmxmh0sn",
+  "widgetName": "Button1"
 }
