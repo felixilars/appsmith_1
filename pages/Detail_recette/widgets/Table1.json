@@ -42,8 +42,9 @@
   ],
   "columnUpdatedAt": 1752949150747,
   "columnWidthMap": {
-    "nom": 192,
-    "type_composant": 169
+    "nom": 156,
+    "type_composant": 152,
+    "unite": 77
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 28,
+  "bottomRow": 29,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,8 +30,8 @@
   "mobileRightColumn": 18,
   "mobileTopRow": 22,
   "needsErrorInfo": false,
-  "originalBottomRow": 28,
-  "originalTopRow": 23,
+  "originalBottomRow": 29,
+  "originalTopRow": 24,
   "overflow": "NONE",
   "parentColumnSpace": 4.75,
   "parentId": "4rn69yck2x",
@@ -43,7 +43,7 @@
   "text": "C'est le ratio entre la marge et le coût de revient",
   "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 23,
+  "topRow": 24,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
