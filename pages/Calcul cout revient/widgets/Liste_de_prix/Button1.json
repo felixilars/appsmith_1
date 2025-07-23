@@ -28,7 +28,7 @@
   "mobileRightColumn": 61,
   "mobileTopRow": 28,
   "needsErrorInfo": false,
-  "onClick": "{{JSObject1.resetValeurs();}}",
+  "onClick": "{{JSObject1.resetValeurs();\nresetWidget(\"Container1\", true);}}",
   "originalBottomRow": 27,
   "originalTopRow": 23,
   "parentColumnSpace": 19.3046875,
