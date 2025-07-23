@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 19,
+  "bottomRow": 18,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -34,8 +34,8 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "originalBottomRow": 19,
-  "originalTopRow": 12,
+  "originalBottomRow": 18,
+  "originalTopRow": 11,
   "overflow": "NONE",
   "parentColumnSpace": 4.0380859375,
   "parentId": "tyv9vu8rqp",
@@ -47,7 +47,7 @@
   "text": "Cout total production HT\n\n{{vue_cout_recette_finale.data[0].cout_total_production.toFixed(5) + \" €\"}}",
   "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 12,
+  "topRow": 11,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

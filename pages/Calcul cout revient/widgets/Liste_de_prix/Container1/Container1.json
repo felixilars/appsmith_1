@@ -2,9 +2,9 @@
   "animateLoading": true,
   "backgroundColor": "#FFFFFF",
   "borderColor": "#E0DEDE",
-  "borderWidth": "1",
+  "borderWidth": "0",
   "bottomRow": 23,
-  "boxShadow": "NONE",
+  "boxShadow": "none",
   "children": [
     {
       "bottomRow": 180,
@@ -35,7 +35,9 @@
   ],
   "containerStyle": "card",
   "displayName": "Container",
+  "dynamicBindingPathList": [],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "stretch",
   "hideCard": false,
   "iconSVG": "/static/media/icon.b4f5f9eb27fc2bb537b53187836aea6c.svg",
