@@ -44,7 +44,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 20,
   "shouldTruncate": false,
-  "text": "Cout total production HT\n\n{{ vue_cout_recette_finale.data[0]?.cout_total_production != undefined ? vue_cout_recette_finale.data[0].cout_total_production.toFixed(5) + \" €\" : \"\" }}",
+  "text": "Cout total production HT\n\n{{vue_cout_recette_finale.data[0].cout_total_production.toFixed(5) + \" €\"}}",
   "textAlign": "CENTER",
   "textColor": "#231F20",
   "topRow": 12,

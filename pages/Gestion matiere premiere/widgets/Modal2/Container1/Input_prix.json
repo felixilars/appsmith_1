@@ -23,7 +23,7 @@
   "inputType": "NUMBER",
   "isDisabled": false,
   "isLoading": false,
-  "isRequired": true,
+  "isRequired": false,
   "isVisible": true,
   "key": "fbltkbsybs",
   "label": "Prix achat HT ( €) *",
