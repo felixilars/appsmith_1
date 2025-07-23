@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 14,
+  "bottomRow": 13,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -33,23 +33,23 @@
   "mobileRightColumn": 17,
   "mobileTopRow": 8,
   "needsErrorInfo": false,
-  "originalBottomRow": 14,
-  "originalTopRow": 9,
+  "originalBottomRow": 13,
+  "originalTopRow": 8,
   "overflow": "NONE",
   "parentColumnSpace": 4.75,
-  "parentId": "y39k9hk449",
+  "parentId": "4bu17ae6oa",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 60,
   "shouldTruncate": false,
-  "text": "{{ JSObject1.compute().marge_prix.toFixed(2) + \" %\" }}\n",
+  "text": "{{ JSObject1.compute().prix_vente.toFixed(2) + \" € TTC\" }}",
   "textAlign": "CENTER",
-  "textColor": "#20ba44",
-  "topRow": 9,
+  "textColor": "#2185d0",
+  "topRow": 8,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "dobtkm1ymc",
-  "widgetName": "Text4Copy"
+  "widgetId": "63yfj22ry9",
+  "widgetName": "Text4"
 }

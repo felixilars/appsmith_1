@@ -36,7 +36,7 @@
   "mobileRightColumn": 42,
   "mobileTopRow": 82,
   "needsErrorInfo": false,
-  "onClick": "{{ \n JSObject1.save().then((success) => {\n    if (success) {\n      navigateTo('Gestion recette finale', {}, 'SAME_WINDOW').then(() => {\n        resetWidget(\"Container1\", true);\n      });\n    }\n  });\n}}",
+  "onClick": "{{ \n JSObject1.save().then((success) => {\n    if (success) {\n      navigateTo('Gestion sous recette', {}, 'SAME_WINDOW').then(() => {\n        resetWidget(\"Container1\", true);\n      });\n    }\n  });\n}}",
   "originalBottomRow": 96,
   "originalTopRow": 92,
   "parentColumnSpace": 20.25,

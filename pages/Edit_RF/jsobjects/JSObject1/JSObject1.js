@@ -37,23 +37,29 @@ export default {
 
   updateQuantite: (targetId, newQty) => {
 		const table = appsmith.store.editRecetteFinaleData || [];
+		const allUnites = Unites.data;
 
 		const updated = table.map(row => {
 			const rowId = row.id_composant || row.id;
+			if (rowId !== targetId) return row;
 
-			if (rowId === targetId) {
-				const newCoutTotal =
-					row.type === "matiere" && row.quantite_unitaire > 0
-						? (row.prix_achat_ht / row.quantite_unitaire) * newQty
-						: row.cout_unitaire * newQty;
+			const currentUnite = allUnites.find(u => u.id_unite === row.id_unite);
+			const facteur = currentUnite?.facteur_conversion || 1;
 
-				return {
-					...row,
-					quantite: newQty,
-					cout_total: newCoutTotal
-				};
+			let newCoutTotal = null;
+
+			if (row.type === "matiere" && row.quantite_unitaire > 0) {
+				const coutUnitaireBase = row.prix_achat_ht / row.quantite_unitaire;
+				newCoutTotal = coutUnitaireBase * newQty * facteur;
+			} else {
+				newCoutTotal = row.cout_unitaire * newQty;
 			}
-			return row;
+
+			return {
+				...row,
+				quantite: newQty,
+				cout_total: newCoutTotal
+			};
 		});
 
 		storeValue("editRecetteFinaleData", updated);
@@ -68,33 +74,25 @@ export default {
 			if (rowId !== targetId) return row;
 
 			const selectedUnite = row.unite_options.find(u => u.id_unite === newUniteId);
-			const currentUnite = allUnites.find(u => u.id_unite === row.id_unite);
 			const newUnite = allUnites.find(u => u.id_unite === newUniteId);
 
-			if (!selectedUnite || !newUnite || !currentUnite) return row;
+			if (!selectedUnite || !newUnite) return row;
 
-			const facteurOld = currentUnite.facteur_conversion || 1;
-			const facteurNew = newUnite.facteur_conversion || 1;
-
-			const quantiteBase = row.quantite * facteurOld;
-
-			const newQuantite = quantiteBase / facteurNew;
+			const facteur = newUnite?.facteur_conversion || 1;
 
 			let newCoutTotal = null;
 
 			if (row.type === "matiere" && row.quantite_unitaire > 0) {
 				const coutUnitaireBase = row.prix_achat_ht / row.quantite_unitaire;
-				newCoutTotal = coutUnitaireBase * quantiteBase;
+				newCoutTotal = coutUnitaireBase * row.quantite * facteur;
 			} else {
-				// Sous-recette
-				newCoutTotal = row.cout_unitaire * newQuantite;
+				newCoutTotal = row.cout_unitaire * row.quantite;
 			}
 
 			return {
 				...row,
 				id_unite: selectedUnite.id_unite,
 				unite: selectedUnite.nom_unite,
-				quantite: newQuantite,
 				cout_total: newCoutTotal
 			};
 		});

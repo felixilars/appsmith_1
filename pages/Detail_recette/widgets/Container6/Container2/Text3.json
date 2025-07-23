@@ -1,7 +1,8 @@
 {
   "animateLoading": true,
+  "backgroundColor": "#f5f5f5",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 14,
+  "bottomRow": 5,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,15 +12,12 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1.875rem",
+  "fontSize": "1rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
@@ -28,28 +26,26 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 12,
-  "mobileLeftColumn": 1,
-  "mobileRightColumn": 17,
-  "mobileTopRow": 8,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 24,
+  "mobileRightColumn": 40,
+  "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "originalBottomRow": 14,
-  "originalTopRow": 9,
   "overflow": "NONE",
   "parentColumnSpace": 4.75,
-  "parentId": "4rn69yck2x",
+  "parentId": "4bu17ae6oa",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 60,
+  "rightColumn": 64,
   "shouldTruncate": false,
-  "text": "{{ JSObject1.compute().marge_cout.toFixed(2) + \" %\" }}\n",
+  "text": "Prix de vente",
   "textAlign": "CENTER",
-  "textColor": "#20ba44",
-  "topRow": 9,
+  "textColor": "#231F20",
+  "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "w0kzbm7qdb",
-  "widgetName": "Text4Copy1"
+  "widgetId": "qdjmvw5oo3",
+  "widgetName": "Text3"
 }

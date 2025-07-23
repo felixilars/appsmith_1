@@ -14,6 +14,7 @@
       "key": "borderRadius"
     }
   ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -31,7 +32,7 @@
   "mobileRightColumn": 20,
   "mobileTopRow": 74,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('Gestion recette finale', {}, 'SAME_WINDOW');}}",
+  "onClick": "{{navigateTo('Gestion sous recette', {}, 'SAME_WINDOW');}}",
   "originalBottomRow": 96,
   "originalTopRow": 92,
   "parentColumnSpace": 20.25,

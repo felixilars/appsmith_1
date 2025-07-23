@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 105,
+  "bottomRow": 118,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonStyle": "PRIMARY_BUTTON",
@@ -48,7 +48,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 63,
   "text": "Confirm",
-  "topRow": 101,
+  "topRow": 114,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "sr5exsgmar",

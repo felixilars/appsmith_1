@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 134,
+  "bottomRow": 32,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
@@ -38,7 +38,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "y2jg5k1pcu",
+      "parentId": "y4inexuto0",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -46,8 +46,8 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "4rn69yck2x",
-      "widgetName": "Canvas3Copy1Copy1"
+      "widgetId": "mec7nlz6vn",
+      "widgetName": "Canvas3Copy1Copy"
     }
   ],
   "containerStyle": "card",
@@ -66,7 +66,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "g6sploneev",
-  "leftColumn": 33,
+  "leftColumn": 16.253968253968253,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 10,
   "minWidth": 450,
@@ -75,18 +75,18 @@
   "mobileRightColumn": 25,
   "mobileTopRow": 101,
   "needsErrorInfo": false,
-  "originalBottomRow": 133,
-  "originalTopRow": 101,
-  "parentColumnSpace": 20.25,
-  "parentId": "0",
+  "originalBottomRow": 135,
+  "originalTopRow": 103,
+  "parentColumnSpace": 19.93359375,
+  "parentId": "jfc13i7dbm",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 49,
+  "rightColumn": 32.507936507936506,
   "shouldScrollContents": true,
-  "topRow": 102,
+  "topRow": 0,
   "type": "CONTAINER_WIDGET",
   "version": 1,
-  "widgetId": "y2jg5k1pcu",
-  "widgetName": "Container4"
+  "widgetId": "y4inexuto0",
+  "widgetName": "Container5"
 }

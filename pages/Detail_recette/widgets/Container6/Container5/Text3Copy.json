@@ -1,7 +1,8 @@
 {
   "animateLoading": true,
+  "backgroundColor": "#f6f7f6",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 29,
+  "bottomRow": 5,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -13,10 +14,10 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.875rem",
+  "fontSize": "1rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
@@ -25,28 +26,26 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 26,
-  "mobileLeftColumn": 2,
-  "mobileRightColumn": 18,
-  "mobileTopRow": 22,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 24,
+  "mobileRightColumn": 40,
+  "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "originalBottomRow": 29,
-  "originalTopRow": 24,
   "overflow": "NONE",
   "parentColumnSpace": 4.75,
-  "parentId": "4rn69yck2x",
+  "parentId": "mec7nlz6vn",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 60,
+  "rightColumn": 63,
   "shouldTruncate": false,
-  "text": "C'est le ratio entre la marge et le coût de revient",
+  "text": "Marge sur prix (taux de marque)",
   "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 24,
+  "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "0nlzs4csi6",
-  "widgetName": "Text5Copy1"
+  "widgetId": "c0zfo9baah",
+  "widgetName": "Text3Copy"
 }
