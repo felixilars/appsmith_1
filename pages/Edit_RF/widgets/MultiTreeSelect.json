@@ -1,0 +1,56 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowClear": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 46,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "options"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "expandAll": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "kdcodu18vh",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Multi Tree Select",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 37,
+  "mobileLeftColumn": 22,
+  "mobileRightColumn": 42,
+  "mobileTopRow": 30,
+  "mode": "SHOW_ALL",
+  "needsErrorInfo": false,
+  "options": "[\n  {\n    \"label\": \"Matières Premières\",\n    \"value\": \"matiere_group\",\n    \"children\": {{ matiere_premiere.data.map(i => ({\n      label: i.nom,\n      value: \"matiere_\" + i.id,\n      type: \"matiere\",\n      id: i.id\n    })) }}\n  },\n  {\n    \"label\": \"Sous-Recettes\",\n    \"value\": \"sous_recette_group\",\n    \"children\": {{ sous_recette.data.map(s => ({\n      label: s.nom,\n      value: \"sousrecette_\" + s.id,\n      type: \"sous_recette\",\n      id: s.id\n    })) }}\n  }\n]",
+  "parentColumnSpace": 20.25,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option(s)",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 21,
+  "topRow": 39,
+  "type": "MULTI_SELECT_TREE_WIDGET",
+  "version": 1,
+  "widgetId": "zvlcw1qp3e",
+  "widgetName": "MultiTreeSelect"
+}

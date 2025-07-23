@@ -120,6 +120,9 @@
     },
     {
       "key": "primaryColumns.customColumn3.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -229,7 +232,7 @@
       "label": "Edit",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{JSObject2.loadRecetteData(Table1.triggeredRow.id_recette_finale);\nshowModal(Edit_recette.name);}}",
+      "onClick": "{{\n//JSObject2.loadRecetteData(Table1.triggeredRow.id_recette_finale);\n//showModal(Edit_recette.name);\nnavigateTo(\"Edit_RF\", {\n  recetteId: Table1.triggeredRow.id_recette_finale\n});\n}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",

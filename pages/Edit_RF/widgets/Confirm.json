@@ -1,11 +1,11 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 86,
+  "bottomRow": 105,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-  "buttonStyle": "PRIMARY",
-  "buttonVariant": "SECONDARY",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
     {
@@ -13,6 +13,11 @@
     },
     {
       "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -25,27 +30,27 @@
   "isLoading": false,
   "isVisible": true,
   "key": "78jkmcu531",
-  "leftColumn": 30,
+  "leftColumn": 47,
   "minWidth": 120,
   "mobileBottomRow": 22,
-  "mobileLeftColumn": 31,
-  "mobileRightColumn": 47,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{closeModal(Edit_recette.name);}}",
-  "originalBottomRow": 86,
-  "originalTopRow": 82,
-  "parentId": "hnrsikahl2",
+  "onClick": "{{\nJSObject1.saveToDatabase()\n}}",
+  "originalBottomRow": 105,
+  "originalTopRow": 101,
+  "parentId": "0",
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 46,
-  "text": "Close",
-  "topRow": 82,
+  "rightColumn": 63,
+  "text": "Confirm",
+  "topRow": 101,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "dcl23eskzq",
-  "widgetName": "Close"
+  "widgetId": "sr5exsgmar",
+  "widgetName": "Confirm"
 }

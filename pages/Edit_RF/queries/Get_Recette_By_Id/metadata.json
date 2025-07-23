@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "683e21591b989748a426a418_4333a5da-f426-41cf-b29a-347a152b6116",
-  "id": "Gestion recette finale_Update_recette",
+  "gitSyncId": "683e21591b989748a426a418_644c346c-ac17-405e-97ca-308fefd19dc6",
+  "id": "Edit_RF_Get_Recette_By_Id",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE newroseclaire.recettes_finales\nSET nom = {{ Input_nom1.text }},\n    description = {{ Input_description1.text }},\n\t\tquantite_produite = {{ Input_quantite.text }},\n\t\tid_unite = {{ Select_unite.selectedOptionValue }}\nWHERE id_recette_finale = {{ Table1.triggeredRow.id_recette_finale }};",
+      "body": "SELECT \n  rf.id_recette_finale,\n  rf.nom,\n  rf.description,\n  rf.quantite_produite,\n  rf.id_unite,\n  u.nom_unite,\n  rf.coefficient_multiplicateur,\n  rf.prix_vente,\n  rf.instructions,\n  rf.actif\nFROM newroseclaire.recettes_finales rf\nLEFT JOIN newroseclaire.unites u ON rf.id_unite = u.id_unite\nWHERE rf.id_recette_finale = {{ appsmith.URL.queryParams.recetteId }};\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "name": "Update_recette",
-    "pageId": "Gestion recette finale",
-    "runBehaviour": "MANUAL",
+    "name": "Get_Recette_By_Id",
+    "pageId": "Edit_RF",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }
 }

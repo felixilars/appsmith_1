@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "683e21591b989748a426a418_4333a5da-f426-41cf-b29a-347a152b6116",
-  "id": "Gestion recette finale_Update_recette",
+  "gitSyncId": "683e21591b989748a426a418_df871ed5-f17c-4698-ba24-e355c5de871b",
+  "id": "Edit_RF_Update_composant_recette",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE newroseclaire.recettes_finales\nSET nom = {{ Input_nom1.text }},\n    description = {{ Input_description1.text }},\n\t\tquantite_produite = {{ Input_quantite.text }},\n\t\tid_unite = {{ Select_unite.selectedOptionValue }}\nWHERE id_recette_finale = {{ Table1.triggeredRow.id_recette_finale }};",
+      "body": "UPDATE newroseclaire.composants_recettes_finales\nSET quantite_unite = {{ this.params.quantite }},\n    id_unite = {{ this.params.id_unite }}\nWHERE id_composant = {{ this.params.id_composant }};\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,8 +27,8 @@
         "key": "body"
       }
     ],
-    "name": "Update_recette",
-    "pageId": "Gestion recette finale",
+    "name": "Update_composant_recette",
+    "pageId": "Edit_RF",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

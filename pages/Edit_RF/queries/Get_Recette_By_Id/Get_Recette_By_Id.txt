@@ -1,0 +1,14 @@
+SELECT 
+  rf.id_recette_finale,
+  rf.nom,
+  rf.description,
+  rf.quantite_produite,
+  rf.id_unite,
+  u.nom_unite,
+  rf.coefficient_multiplicateur,
+  rf.prix_vente,
+  rf.instructions,
+  rf.actif
+FROM newroseclaire.recettes_finales rf
+LEFT JOIN newroseclaire.unites u ON rf.id_unite = u.id_unite
+WHERE rf.id_recette_finale = {{ appsmith.URL.queryParams.recetteId }};

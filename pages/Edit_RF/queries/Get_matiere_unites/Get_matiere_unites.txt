@@ -1,0 +1,10 @@
+SELECT 
+  mp.id_matiere_premiere,
+  mp.nom,
+  mp.prix_achat_ht,
+  mp.quantite_unite,
+  mp.id_unite,
+  u.nom_unite
+FROM newroseclaire.matieres_premieres mp
+JOIN newroseclaire.unites u ON mp.id_unite = u.id_unite
+WHERE mp.actif = true

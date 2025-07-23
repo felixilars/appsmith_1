@@ -1,0 +1,11 @@
+SELECT 
+  sr.id_sous_recette,
+  sr.nom,
+  sr.id_unite,
+  sr.quantite_produite,
+  u.nom_unite,
+  v.cout_total
+FROM newroseclaire.sous_recettes sr
+JOIN newroseclaire.unites u ON sr.id_unite = u.id_unite
+LEFT JOIN newroseclaire.vue_cout_sous_recette v ON sr.id_sous_recette = v.id_sous_recette
+WHERE sr.actif = true

@@ -72,6 +72,10 @@
     {
       "id": "Detail_recette",
       "isDefault": false
+    },
+    {
+      "id": "Edit_RF",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

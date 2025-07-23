@@ -1,0 +1,45 @@
+SELECT 
+  crf.id_composant,
+  crf.quantite_unite,
+  crf.id_unite,
+  u.nom_unite,
+  u.type_unite,
+
+  -- Nom and type composant
+  CASE 
+    WHEN crf.id_matiere_premiere IS NOT NULL THEN mp.nom
+    ELSE sr.nom
+  END AS nom_composant,
+
+  CASE 
+    WHEN crf.id_matiere_premiere IS NOT NULL THEN 'matiere'
+    ELSE 'sous_recette'
+  END AS type_composant,
+
+  -- Prix matière première
+  mp.prix_achat_ht,
+
+  -- Quantité unitaire (si matière première)
+  mp.quantite_unite AS quantite_unitaire,
+
+  -- Coût unitaire (calculé)
+  CASE 
+    WHEN crf.id_matiere_premiere IS NOT NULL AND mp.quantite_unite > 0 THEN ROUND(mp.prix_achat_ht / mp.quantite_unite, 5)
+    ELSE NULL
+  END AS cout_unitaire,
+
+  -- Coût total (calculé)
+  CASE 
+    WHEN crf.id_matiere_premiere IS NOT NULL AND mp.quantite_unite > 0 THEN 
+      ROUND((mp.prix_achat_ht / mp.quantite_unite) * crf.quantite_unite, 5)
+    ELSE 
+      ROUND(v.cout_total / NULLIF(v.quantite_produite, 0) * crf.quantite_unite, 5)
+  END AS cout_total
+
+FROM newroseclaire.composants_recettes_finales crf
+LEFT JOIN newroseclaire.matieres_premieres mp ON crf.id_matiere_premiere = mp.id_matiere_premiere
+LEFT JOIN newroseclaire.sous_recettes sr ON crf.id_sous_recette = sr.id_sous_recette
+LEFT JOIN newroseclaire.vue_cout_sous_recette v ON crf.id_sous_recette = v.id_sous_recette
+LEFT JOIN newroseclaire.unites u ON crf.id_unite = u.id_unite
+WHERE crf.id_recette_finale = {{ appsmith.URL.queryParams.recetteId }}
+ORDER BY type_composant

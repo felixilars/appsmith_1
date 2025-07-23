@@ -5,7 +5,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 79,
+  "bottomRow": 98,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -38,22 +38,27 @@
     "nom",
     "quantite",
     "id_unite",
-    "type_unite",
-    "unite",
-    "unite_options",
     "prix_achat_ht",
     "quantite_unitaire",
     "cout_unitaire",
-    "cout_total"
+    "cout_total",
+    "customColumn1",
+    "type_unite",
+    "unite",
+    "unite_options"
   ],
-  "columnUpdatedAt": 1752708977658,
+  "columnUpdatedAt": 1753287196175,
   "columnWidthMap": {
     "cout_total": 125,
-    "cout_unitaire": 157,
-    "nom": 276,
+    "cout_unitaire": 131,
+    "customColumn1": 101,
+    "id_composant": 88,
+    "id_unite": 115,
+    "nom": 172,
     "nom_composant": 174,
-    "quantite": 148,
+    "quantite": 115,
     "quantite_unitaire": 156,
+    "type": 109,
     "type_composant": 157
   },
   "customIsLoading": false,
@@ -73,9 +78,6 @@
     },
     {
       "key": "boxShadow"
-    },
-    {
-      "key": "tableData"
     },
     {
       "key": "primaryColumns.id_composant.computedValue"
@@ -115,6 +117,9 @@
     },
     {
       "key": "primaryColumns.cout_total.computedValue"
+    },
+    {
+      "key": "tableData"
     }
   ],
   "dynamicPropertyPathList": [
@@ -126,6 +131,9 @@
     },
     {
       "key": "primaryColumns.id_unite.onOptionChange"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -134,6 +142,9 @@
     },
     {
       "key": "primaryColumns.id_unite.onOptionChange"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -157,10 +168,10 @@
   "mobileRightColumn": 55,
   "mobileTopRow": 14,
   "needsErrorInfo": false,
-  "originalBottomRow": 79,
-  "originalTopRow": 34,
+  "originalBottomRow": 98,
+  "originalTopRow": 48,
   "parentColumnSpace": 13.5,
-  "parentId": "hnrsikahl2",
+  "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
     "cout_total": {
@@ -169,7 +180,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "number",
-      "computedValue": "{{Table_Ingredients.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"cout_total\"]))}}",
+      "computedValue": "{{(() => { const tableData = Table_Ingredients.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow.cout_total.toFixed(5) )) :  currentRow.cout_total.toFixed(5)  })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -203,7 +214,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "number",
-      "computedValue": "{{Table_Ingredients.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"cout_unitaire\"]))}}",
+      "computedValue": "{{(() => { const tableData = Table_Ingredients.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.cout_unitaire)) : currentRow.cout_unitaire })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -225,6 +236,45 @@
       "originalId": "cout_unitaire",
       "sticky": "",
       "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn1": {
+      "alias": "delete",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "buttonColor": "#18181b",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "buttonVariant": "SECONDARY",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "iconName": "trash",
+      "id": "customColumn1",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "delete",
+      "labelColor": "#FFFFFF",
+      "menuItemsSource": "STATIC",
+      "notation": "standard",
+      "onClick": "{{ JSObject1.deleteRowtmp(currentRow.id_composant || currentRow.id) }}\n",
+      "originalId": "customColumn1",
+      "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -290,7 +340,7 @@
       "isVisible": true,
       "label": "id_unite",
       "notation": "standard",
-      "onOptionChange": "{{\n  (() => {\n    const updatedRow = Table_Ingredients.updatedRow;\n    const data = [...appsmith.store.editRecetteFinaleData];\n\n    const index = data.findIndex(row => row.id_composant === updatedRow.id_composant);\n    if (index !== -1) {\n      const selectedUnite = data[index].unite_options.find(u => u.id_unite === updatedRow.id_unite);\n      if (selectedUnite) {\n        data[index] = {\n          ...data[index],\n          id_unite: selectedUnite.id_unite,\n          unite: selectedUnite.nom_unite\n        };\n        storeValue(\"editRecetteFinaleData\", data);\n      }\n    }\n  })()\n}}\n",
+      "onOptionChange": "{{ JSObject1.updateUnite(currentRow.id_composant || currentRow.id, currentRow.id_unite) }}\n",
       "originalId": "id_unite",
       "selectOptions": "{{(() => { const tableData = Table_Ingredients.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \n  currentRow.unite_options.map(u => ({\n    label: u.nom_unite,\n    value: u.id_unite\n  }))\n)) :  \n  currentRow.unite_options.map(u => ({\n    label: u.nom_unite,\n    value: u.id_unite\n  }))\n })()}}",
       "sticky": "",
@@ -303,7 +353,7 @@
     },
     "nom": {
       "alias": "nom",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
@@ -394,7 +444,7 @@
       "isVisible": true,
       "label": "quantite",
       "notation": "standard",
-      "onSubmit": "{{ JSObject2.updateQuantite(currentRow.id_composant, currentRow.quantite) }}\n",
+      "onSubmit": "{{ JSObject1.updateQuantite(currentRow.id_composant || currentRow.id, currentRow.quantite) }}\n",
       "originalId": "quantite",
       "sticky": "",
       "textColor": "",
@@ -440,7 +490,7 @@
     },
     "type": {
       "alias": "type",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
@@ -580,13 +630,13 @@
   "rightColumn": 63,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{ appsmith.store.editRecetteFinaleData }}\n",
+  "tableData": "{{appsmith.store.editRecetteFinaleData}}",
   "textSize": "0.875rem",
-  "topRow": 34,
+  "topRow": 48,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",
-  "widgetId": "2ph3oyrqyn",
+  "widgetId": "44t66dzsnf",
   "widgetName": "Table_Ingredients"
 }

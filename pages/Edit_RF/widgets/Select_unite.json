@@ -2,9 +2,9 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 24,
+  "bottomRow": 27,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( Unites.data.find(u => u.nom_unite === Table1.triggeredRow.unite)?.id_unite))(Select1.options, Select1.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( appsmith.store.editRecetteMeta.id_unite))(Select_unite.options, Select_unite.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -13,10 +13,10 @@
       "key": "borderRadius"
     },
     {
-      "key": "defaultOptionValue"
+      "key": "sourceData"
     },
     {
-      "key": "sourceData"
+      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -48,10 +48,10 @@
   "needsErrorInfo": false,
   "optionLabel": "nom_unite",
   "optionValue": "id_unite",
-  "originalBottomRow": 24,
-  "originalTopRow": 17,
+  "originalBottomRow": 27,
+  "originalTopRow": 20,
   "parentColumnSpace": 19.228125,
-  "parentId": "hnrsikahl2",
+  "parentId": "0",
   "parentRowSpace": 10,
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
@@ -59,9 +59,9 @@
   "rightColumn": 60,
   "serverSideFiltering": false,
   "sourceData": "{{Unites.data}}",
-  "topRow": 17,
+  "topRow": 20,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "zw3xd5mc8b",
-  "widgetName": "Select1"
+  "widgetId": "d4w44mxb5d",
+  "widgetName": "Select_unite"
 }
