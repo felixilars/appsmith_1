@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE newroseclaire.recettes_finales\nSET\n  nom = {{ Input_nom.text }},\n  description = {{ Input_description.text }},\n  quantite_produite = {{ Input_quantite.text }},\n  id_unite = {{ Select_unite.selectedOptionValue }}\nWHERE id_recette_finale = {{ appsmith.URL.queryParams.recetteId }}",
+      "body": "UPDATE newroseclaire.recettes_finales\nSET\n  nom = {{ Input_nom.text }},\n  description = {{ Input_description.text }},\n  quantite_produite = {{ Input_quantite.text }},\n  id_unite = {{ Select_unite.selectedOptionValue }},\n\tprix_vente = {{Input_prix_vente.text}}\nWHERE id_recette_finale = {{ appsmith.URL.queryParams.recetteId }}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

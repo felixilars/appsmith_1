@@ -229,6 +229,8 @@ export default {
 		const table = appsmith.store.editRecetteFinaleData || [];
 		const original = Table_ingredients.data || [];
 
+		await Update_recette_finale.run();
+		
 		try {
 			//update
 			for (let row of table) {

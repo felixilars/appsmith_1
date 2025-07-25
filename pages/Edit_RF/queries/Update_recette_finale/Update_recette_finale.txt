@@ -3,5 +3,6 @@ SET
   nom = {{ Input_nom.text }},
   description = {{ Input_description.text }},
   quantite_produite = {{ Input_quantite.text }},
-  id_unite = {{ Select_unite.selectedOptionValue }}
+  id_unite = {{ Select_unite.selectedOptionValue }},
+	prix_vente = {{Input_prix_vente.text}}
 WHERE id_recette_finale = {{ appsmith.URL.queryParams.recetteId }}
