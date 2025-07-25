@@ -14,7 +14,11 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -32,7 +36,7 @@
   "mobileRightColumn": 58,
   "mobileTopRow": 5,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('creer_recette_finale', {}, 'SAME_WINDOW');}}",
+  "onClick": "{{\nnavigateTo('creer_recette_finale', {}, 'SAME_WINDOW');\n}}",
   "parentColumnSpace": 20.25,
   "parentId": "0",
   "parentRowSpace": 10,

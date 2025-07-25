@@ -14,7 +14,11 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -32,7 +36,7 @@
   "mobileRightColumn": 57,
   "mobileTopRow": 9,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('creer_sous_recette', {}, 'SAME_WINDOW');}}",
+  "onClick": "{{\nstoreValue(\"previousPage\", appsmith.currentPageName);\nnavigateTo('creer_sous_recette', {}, 'SAME_WINDOW');\n}}",
   "parentColumnSpace": 20.25,
   "parentId": "0",
   "parentRowSpace": 10,

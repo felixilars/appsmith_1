@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 96,
+  "bottomRow": 63,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
@@ -14,11 +14,7 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [
-    {
-      "key": "onClick"
-    }
-  ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -28,17 +24,17 @@
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "taxpbs76ya",
-  "leftColumn": 2,
+  "key": "t59d1yxgpb",
+  "leftColumn": 48,
   "minWidth": 120,
-  "mobileBottomRow": 86,
-  "mobileLeftColumn": 26,
-  "mobileRightColumn": 42,
-  "mobileTopRow": 82,
+  "mobileBottomRow": 71,
+  "mobileLeftColumn": 41,
+  "mobileRightColumn": 57,
+  "mobileTopRow": 67,
   "needsErrorInfo": false,
-  "onClick": "{{ \n JSObject1.save().then((success) => {\n    if (success) {\n      navigateTo('Gestion sous recette', {}, 'SAME_WINDOW').then(() => {\n        resetWidget(\"Container1\", true);\n      });\n    }\n  });\n}}",
-  "originalBottomRow": 96,
-  "originalTopRow": 92,
+  "onClick": "{{navigateTo('Gestion matiere premiere', {}, 'SAME_WINDOW');}}",
+  "originalBottomRow": 63,
+  "originalTopRow": 59,
   "parentColumnSpace": 20.25,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -47,11 +43,11 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 18,
-  "text": "Créer Sous Recette",
-  "topRow": 92,
+  "rightColumn": 63,
+  "text": "Annuler",
+  "topRow": 59,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "d2bcn4v880",
-  "widgetName": "Valide"
+  "widgetId": "0ihchoj5k7",
+  "widgetName": "Annuler"
 }

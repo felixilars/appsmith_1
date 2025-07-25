@@ -242,7 +242,7 @@
       "label": "Edit",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{ \n  /*Composants_sous_recette.run(() => {\n    JSObject1.enrichData();\n    showModal(\"Edit\");\n  });*/\nnavigateTo(\"Edit_SR\", {\n  SRId: Table1.triggeredRow.id_sous_recette\n});\n\n}}\n",
+      "onClick": "{{ \nnavigateTo(\"Edit_SR\", {\n  SRId: Table1.triggeredRow.id_sous_recette\n});\n}}\n",
       "originalId": "customColumn2",
       "sticky": "",
       "textSize": "0.875rem",
