@@ -56,7 +56,7 @@
       "key": "boxShadow"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
@@ -72,8 +72,6 @@
   "mobileRightColumn": 36,
   "mobileTopRow": 10,
   "needsErrorInfo": false,
-  "originalBottomRow": 30,
-  "originalTopRow": 0,
   "parentColumnSpace": 14.234375,
   "parentId": "0",
   "parentRowSpace": 10,
