@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "DELETE FROM newroseclaire.matieres_premieres WHERE id_matiere_premiere = '{{ Table1.triggeredRow.id_matiere_premiere }}';",
+      "body": "DELETE FROM newroseclaire.historique_prix WHERE id_matiere_premiere = '{{ Table1.triggeredRow.id_matiere_premiere }}';\n\nDELETE FROM newroseclaire.matieres_premieres WHERE id_matiere_premiere = '{{ Table1.triggeredRow.id_matiere_premiere }}';",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
