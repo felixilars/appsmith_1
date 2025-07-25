@@ -25,6 +25,9 @@
     },
     {
       "key": "onFocus"
+    },
+    {
+      "key": "onSubmit"
     }
   ],
   "iconAlign": "left",
@@ -51,7 +54,8 @@
   "mobileTopRow": 28,
   "needsErrorInfo": false,
   "onFocus": "",
-  "onTextChanged": "{{JSObject1.onCrTtcChange();}}",
+  "onSubmit": "{{JSObject1.onCrTtcChange();}}",
+  "onTextChanged": "",
   "originalBottomRow": 16,
   "originalTopRow": 9,
   "parentColumnSpace": 12.3470458984375,

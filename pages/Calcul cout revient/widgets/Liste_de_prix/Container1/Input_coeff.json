@@ -25,6 +25,9 @@
     },
     {
       "key": "onFocus"
+    },
+    {
+      "key": "onSubmit"
     }
   ],
   "iconAlign": "left",
@@ -51,7 +54,8 @@
   "mobileTopRow": 16,
   "needsErrorInfo": false,
   "onFocus": "",
-  "onTextChanged": "{{JSObject1.onCoeffChange();\nresetWidget(\"Container1\", true);}}",
+  "onSubmit": "{{JSObject1.onCoeffChange();\nresetWidget(\"Container1\", true);}}",
+  "onTextChanged": "",
   "originalBottomRow": 7,
   "originalTopRow": 0,
   "parentColumnSpace": 12.3470458984375,
