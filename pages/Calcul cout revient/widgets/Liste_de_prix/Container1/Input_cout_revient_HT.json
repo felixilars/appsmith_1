@@ -21,6 +21,9 @@
   "dynamicPropertyPathList": [
     {
       "key": "onSubmit"
+    },
+    {
+      "key": "onBlur"
     }
   ],
   "dynamicTriggerPathList": [
@@ -32,6 +35,9 @@
     },
     {
       "key": "onSubmit"
+    },
+    {
+      "key": "onBlur"
     }
   ],
   "iconAlign": "left",
@@ -57,6 +63,7 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
+  "onBlur": "{{JSObject1.onCrHtChange();}}",
   "onFocus": "",
   "onSubmit": "{{JSObject1.onCrHtChange();}}",
   "onTextChanged": "",

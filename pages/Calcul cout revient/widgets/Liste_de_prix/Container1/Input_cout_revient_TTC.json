@@ -18,7 +18,14 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onSubmit"
+    },
+    {
+      "key": "onBlur"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onTextChanged"
@@ -28,6 +35,9 @@
     },
     {
       "key": "onSubmit"
+    },
+    {
+      "key": "onBlur"
     }
   ],
   "iconAlign": "left",
@@ -53,6 +63,7 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 28,
   "needsErrorInfo": false,
+  "onBlur": "{{JSObject1.onCrTtcChange();}}",
   "onFocus": "",
   "onSubmit": "{{JSObject1.onCrTtcChange();}}",
   "onTextChanged": "",
