@@ -45,9 +45,10 @@
     "customColumn1",
     "type_unite",
     "unite",
-    "unite_options"
+    "unite_options",
+    "id"
   ],
-  "columnUpdatedAt": 1753287196175,
+  "columnUpdatedAt": 1753479985605,
   "columnWidthMap": {
     "cout_total": 125,
     "cout_unitaire": 131,
@@ -120,6 +121,9 @@
     },
     {
       "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.id.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -275,6 +279,40 @@
       "onClick": "{{ JSObject1.deleteRowtmp(currentRow.id_composant || currentRow.id) }}\n",
       "originalId": "customColumn1",
       "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "id": {
+      "alias": "id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{Table_Ingredients.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "id",
+      "index": 2,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "id",
+      "notation": "standard",
+      "originalId": "id",
+      "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
