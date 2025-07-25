@@ -65,7 +65,7 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 21,
-  "serverSideFiltering": true,
+  "serverSideFiltering": false,
   "shouldScrollContents": true,
   "sourceData": "{{liste_recettes_finales.data}}\n",
   "topRow": 0,
