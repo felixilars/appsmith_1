@@ -76,6 +76,10 @@
     {
       "id": "Edit_RF",
       "isDefault": false
+    },
+    {
+      "id": "Edit_SR",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

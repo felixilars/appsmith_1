@@ -1,0 +1,7 @@
+UPDATE newroseclaire.sous_recettes
+SET
+  nom = {{ this.params.nom }},
+  description = {{ this.params.description }},
+  quantite_produite = {{ this.params.quantite_produit }},
+  id_unite = {{ this.params.id_unite }}
+WHERE id_sous_recette = {{ appsmith.URL.queryParams.SRId }};

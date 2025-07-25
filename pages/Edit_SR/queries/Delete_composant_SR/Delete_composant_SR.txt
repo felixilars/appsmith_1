@@ -1,0 +1,2 @@
+DELETE FROM newroseclaire.composants_sous_recettes
+WHERE id_composant = {{ this.params.id_composant }};

@@ -1,0 +1,3 @@
+SELECT *
+FROM newroseclaire.sous_recettes
+WHERE id_sous_recette = {{ appsmith.URL.queryParams.SRId }};

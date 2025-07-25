@@ -11,6 +11,9 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -30,13 +33,15 @@
   "mobileRightColumn": 41,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
+  "originalBottomRow": 8,
+  "originalTopRow": 4,
   "overflow": "NONE",
   "parentId": "xpeza3u0gu",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 41,
+  "rightColumn": 29,
   "shouldTruncate": false,
-  "text": "Matiere_premiere",
+  "text": "{{Table1.triggeredRow.nom}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 4,
